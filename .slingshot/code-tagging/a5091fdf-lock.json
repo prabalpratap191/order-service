@@ -1,0 +1,140 @@
+{
+  "src\\main\\resources\\application.yml": {
+    "filename": "application.yml",
+    "path": "src\\main\\resources\\application.yml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "1cffcf": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786430621,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "d936a9dd",
+          "files": "645e8594"
+        },
+        "hash": "1d099b06",
+        "messageId": "system_e998db60-954f-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 12:13:41 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "7d4387": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786430969,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "b06f0df0",
+          "files": "f51fa6ad"
+        },
+        "hash": "e63b8e71",
+        "messageId": "system_b54f4730-9550-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 12:19:29 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "4": {
+        "chunkId": "7d4387",
+        "hash": "16efa479",
+        "encoded": "spring:",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "7d4387",
+        "hash": "b08ed6b1",
+        "encoded": "application:",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "7d4387",
+        "hash": "4d1294e4",
+        "encoded": "name:%20order-service",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "7d4387",
+        "hash": "7a812870",
+        "encoded": "datasource:",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "7d4387",
+        "hash": "28932c14",
+        "encoded": "url:%20jdbc:postgresql://localhost:5432/orderDb?TimeZone=Asia/Kolkata",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "7d4387",
+        "hash": "29b525e5",
+        "encoded": "username:%20$%7BDB_USERNAME:pgadmin%7D",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "7d4387",
+        "hash": "1d2bedc5",
+        "encoded": "password:%20$%7BDB_PASSWORD:pgadminpass%7D",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "7d4387",
+        "hash": "9a4b4535",
+        "encoded": "driver-class-name:%20org.postgresql.Driver",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "7d4387",
+        "hash": "c5210588",
+        "encoded": "hikari:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "7d4387",
+        "hash": "36aa3afa",
+        "encoded": "maximum-pool-size:%2020",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "7d4387",
+        "hash": "341dc89f",
+        "encoded": "minimum-idle:%205",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "7d4387",
+        "hash": "f9ba60bf",
+        "encoded": "idle-timeout:%20300000",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "7d4387",
+        "hash": "62e5815a",
+        "encoded": "connection-timeout:%2020000",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "7d4387",
+        "hash": "26b5f1e1",
+        "encoded": "data-source-properties:",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "7d4387",
+        "hash": "13be76c4",
+        "encoded": "TimeZone:%20Asia/Kolkata",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

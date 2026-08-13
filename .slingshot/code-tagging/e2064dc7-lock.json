@@ -1,0 +1,204 @@
+{
+  "src\\main\\resources\\application-local-with-kafka.yml": {
+    "filename": "application-local-with-kafka.yml",
+    "path": "src\\main\\resources\\application-local-with-kafka.yml",
+    "version": "1.2",
+    "contextFile": "e2064dc7-context.json",
+    "chunks": {
+      "8c687f": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786434252,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "771e6c07"
+        },
+        "hash": "9e3858a0",
+        "messageId": "system_2d316ab0-9558-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 1:14:12 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "8c687f",
+        "hash": "fc87a817",
+        "encoded": "#%20Local%20development%20profile%20with%20Kafka%20enabled",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "8c687f",
+        "hash": "213c79c6",
+        "encoded": "spring:",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "8c687f",
+        "hash": "462f9248",
+        "encoded": "datasource:",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "8c687f",
+        "hash": "bf8de9be",
+        "encoded": "url:%20jdbc:postgresql://localhost:5432/orderDb?TimeZone=Asia/Kolkata",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "8c687f",
+        "hash": "27764e5e",
+        "encoded": "username:%20pgadmin",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "8c687f",
+        "hash": "71a45821",
+        "encoded": "password:%20pgadminpass",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "8c687f",
+        "hash": "2a3cf2ed",
+        "encoded": "jpa:",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "8c687f",
+        "hash": "b924d3c1",
+        "encoded": "hibernate:",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "8c687f",
+        "hash": "7f2000f4",
+        "encoded": "ddl-auto:%20update",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "8c687f",
+        "hash": "d0bfde94",
+        "encoded": "show-sql:%20true",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "8c687f",
+        "hash": "d6336439",
+        "encoded": "kafka:",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "8c687f",
+        "hash": "63dfcdb0",
+        "encoded": "bootstrap-servers:%20$%7BKAFKA_BOOTSTRAP_SERVERS:localhost:9092%7D",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "8c687f",
+        "hash": "368f89da",
+        "encoded": "producer:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "8c687f",
+        "hash": "f750f044",
+        "encoded": "key-serializer:%20org.apache.kafka.common.serialization.StringSerializer",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "8c687f",
+        "hash": "de014b9e",
+        "encoded": "value-serializer:%20org.springframework.kafka.support.serializer.JsonSerializer",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "8c687f",
+        "hash": "acffccf1",
+        "encoded": "acks:%20all",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "8c687f",
+        "hash": "6461fe34",
+        "encoded": "retries:%203",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "8c687f",
+        "hash": "2e287818",
+        "encoded": "consumer:",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "8c687f",
+        "hash": "9f6a6e29",
+        "encoded": "group-id:%20order-service-group",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "8c687f",
+        "hash": "6ad843e2",
+        "encoded": "auto-offset-reset:%20earliest",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "8c687f",
+        "hash": "d8377825",
+        "encoded": "key-deserializer:%20org.apache.kafka.common.serialization.StringDeserializer",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "8c687f",
+        "hash": "45444aad",
+        "encoded": "value-deserializer:%20org.springframework.kafka.support.serializer.JsonDeserializer",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "8c687f",
+        "hash": "21995b3b",
+        "encoded": "logging:",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "8c687f",
+        "hash": "5d0dcff1",
+        "encoded": "level:",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "8c687f",
+        "hash": "b78100c7",
+        "encoded": "com.ecommerce.order:%20DEBUG",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "8c687f",
+        "hash": "918ad158",
+        "encoded": "org.hibernate.SQL:%20DEBUG",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "8c687f",
+        "hash": "418c45eb",
+        "encoded": "org.hibernate.type.descriptor.sql.BasicBinder:%20TRACE",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "8c687f",
+        "hash": "f21ecff2",
+        "encoded": "org.apache.kafka:%20INFO",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "8c687f",
+        "hash": "afe8b2a8",
+        "encoded": "org.springframework.kafka:%20INFO",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

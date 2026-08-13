@@ -1,0 +1,31 @@
+{
+  "filename": ".env.example",
+  "path": ".env.example",
+  "version": "1.1",
+  "files": {
+    "645e8594": {
+      "value": [
+        {
+          "programming_language": "YAML",
+          "fileName": "db-docker-compose.yml",
+          "relativeFilePath": "c:\\Users\\prasingh80\\Music\\Legacy\\MS Legacy\\db-docker-compose.yml",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            33
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "d936a9dd": {
+      "value": "how to access this db in my spring boot application"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

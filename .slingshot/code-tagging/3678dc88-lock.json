@@ -1,0 +1,1128 @@
+{
+  "TIMEZONE_FIX_SUMMARY.md": {
+    "filename": "TIMEZONE_FIX_SUMMARY.md",
+    "path": "TIMEZONE_FIX_SUMMARY.md",
+    "version": "1.2",
+    "contextFile": "3678dc88-context.json",
+    "chunks": {
+      "7cbbd7": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786434022,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "b9ce3e58"
+        },
+        "hash": "17aedafd",
+        "messageId": "system_6a48b800-9557-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 1:10:22 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "7cbbd7",
+        "hash": "656f0810",
+        "encoded": "#%20%E2%9C%85%20Timezone%20Issue%20Resolution%20Summary",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "7cbbd7",
+        "hash": "055b802f",
+        "encoded": "##%20%F0%9F%8E%AF%20Problem%20Statement",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "7cbbd7",
+        "hash": "6d95b501",
+        "encoded": "**Error:**",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "7cbbd7",
+        "hash": "57e19d6c",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "7cbbd7",
+        "hash": "96c52a14",
+        "encoded": "FATAL:%20invalid%20value%20for%20parameter%20%22TimeZone%22:%20%22Asia/Calcutta%22",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "7cbbd7",
+        "hash": "a8e4a317",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "7cbbd7",
+        "hash": "35e4a8ca",
+        "encoded": "**Root%20Cause:**",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "7cbbd7",
+        "hash": "774482bb",
+        "encoded": "-%20PostgreSQL%20doesn't%20recognize%20%22Asia/Calcutta%22%20(deprecated%20timezone%20identifier)",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "7cbbd7",
+        "hash": "a57d5d04",
+        "encoded": "-%20Correct%20identifier:%20%22Asia/Kolkata%22%20(modern%20IANA%20standard)",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "7cbbd7",
+        "hash": "1b20178f",
+        "encoded": "-%20System%20was%20using%20the%20old%20timezone,%20causing%20database%20connection%20failures",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "7cbbd7",
+        "hash": "9db884cf",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "7cbbd7",
+        "hash": "2f6e4bf4",
+        "encoded": "##%20%F0%9F%94%A7%20Solutions%20Implemented",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "7cbbd7",
+        "hash": "54de5709",
+        "encoded": "###%201.%20Application-Level%20Fix%20(Primary)",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "7cbbd7",
+        "hash": "7638073c",
+        "encoded": "**File:**%20%60OrderServiceApplication.java%60",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "7cbbd7",
+        "hash": "0545347f",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "7cbbd7",
+        "hash": "7d11d2c7",
+        "encoded": "public%20static%20void%20main(String%5B%5D%20args)%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "7cbbd7",
+        "hash": "59555324",
+        "encoded": "//%20CRITICAL:%20Set%20timezone%20BEFORE%20Spring%20Boot%20starts",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "7cbbd7",
+        "hash": "1548b98e",
+        "encoded": "TimeZone.setDefault(TimeZone.getTimeZone(%22Asia/Kolkata%22));",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "7cbbd7",
+        "hash": "5f6beb09",
+        "encoded": "System.out.println(%22Application%20Timezone:%20%22%20+%20TimeZone.getDefault().getID());",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "7cbbd7",
+        "hash": "0cb5883f",
+        "encoded": "SpringApplication.run(OrderServiceApplication.class,%20args);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "7cbbd7",
+        "hash": "46b23985",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "7cbbd7",
+        "hash": "5d2de7a5",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "7cbbd7",
+        "hash": "07bafc41",
+        "encoded": "**Why%20this%20works:**",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "7cbbd7",
+        "hash": "33546dc8",
+        "encoded": "-%20Sets%20JVM%20default%20timezone%20before%20any%20Spring%20Bean%20initialization",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "7cbbd7",
+        "hash": "00ef374e",
+        "encoded": "-%20Executes%20before%20datasource%20creation",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "7cbbd7",
+        "hash": "6b5d1c79",
+        "encoded": "-%20Ensures%20all%20JDBC%20connections%20use%20correct%20timezone",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "7cbbd7",
+        "hash": "7b523798",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "7cbbd7",
+        "hash": "e7a1edc4",
+        "encoded": "###%202.%20JDBC%20URL%20Parameter%20(Secondary)",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "7cbbd7",
+        "hash": "297b6483",
+        "encoded": "**File:**%20%60application.yml%60",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "7cbbd7",
+        "hash": "c8b0ffe5",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "7cbbd7",
+        "hash": "13631c86",
+        "encoded": "spring:",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "7cbbd7",
+        "hash": "86961322",
+        "encoded": "datasource:",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "7cbbd7",
+        "hash": "83960b64",
+        "encoded": "url:%20jdbc:postgresql://localhost:5432/orderDb?TimeZone=Asia/Kolkata",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "7cbbd7",
+        "hash": "80090741",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "7cbbd7",
+        "hash": "f9abbd3f",
+        "encoded": "**Why%20this%20works:**",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "7cbbd7",
+        "hash": "9e30f776",
+        "encoded": "-%20Explicitly%20tells%20PostgreSQL%20JDBC%20driver%20which%20timezone%20to%20use",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "7cbbd7",
+        "hash": "b8a06680",
+        "encoded": "-%20Overrides%20any%20system-level%20timezone%20settings",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "7cbbd7",
+        "hash": "b17dad7d",
+        "encoded": "-%20Connection-specific%20configuration",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "7cbbd7",
+        "hash": "dfa14edc",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "7cbbd7",
+        "hash": "882fcf80",
+        "encoded": "###%203.%20HikariCP%20Datasource%20Property%20(Tertiary)",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "7cbbd7",
+        "hash": "56dae6e4",
+        "encoded": "**File:**%20%60application.yml%60",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "7cbbd7",
+        "hash": "f937f6f7",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "7cbbd7",
+        "hash": "5299471e",
+        "encoded": "spring:",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "7cbbd7",
+        "hash": "00bf3b5d",
+        "encoded": "datasource:",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "7cbbd7",
+        "hash": "3d18ee98",
+        "encoded": "hikari:",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "7cbbd7",
+        "hash": "6b74732e",
+        "encoded": "data-source-properties:",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "7cbbd7",
+        "hash": "80365f7c",
+        "encoded": "TimeZone:%20Asia/Kolkata",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "7cbbd7",
+        "hash": "9bea3682",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "7cbbd7",
+        "hash": "9069d99e",
+        "encoded": "**Why%20this%20works:**",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "7cbbd7",
+        "hash": "7c01fc39",
+        "encoded": "-%20Sets%20timezone%20at%20connection%20pool%20level",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "7cbbd7",
+        "hash": "1afde961",
+        "encoded": "-%20Ensures%20all%20pooled%20connections%20use%20correct%20timezone",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "7cbbd7",
+        "hash": "4286c9a9",
+        "encoded": "-%20Double-layer%20protection",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "7cbbd7",
+        "hash": "db67072b",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "7cbbd7",
+        "hash": "6299ccc4",
+        "encoded": "###%204.%20Startup%20Scripts%20(Convenience)",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "7cbbd7",
+        "hash": "78b2e7c3",
+        "encoded": "**Files:**%20%60run-local.bat%60%20(Windows)%20and%20%60run-local.sh%60%20(Linux/Mac)",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "7cbbd7",
+        "hash": "3f7d0245",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "7cbbd7",
+        "hash": "0a85906b",
+        "encoded": "#%20Windows",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "7cbbd7",
+        "hash": "c60f7033",
+        "encoded": "set%20TZ=Asia/Kolkata",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "7cbbd7",
+        "hash": "096f7522",
+        "encoded": "mvn%20spring-boot:run%20-Dspring-boot.run.jvmArguments=%22-Duser.timezone=Asia/Kolkata%22",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "7cbbd7",
+        "hash": "f97a18d6",
+        "encoded": "#%20Linux/Mac",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "7cbbd7",
+        "hash": "1be61d99",
+        "encoded": "export%20TZ=Asia/Kolkata",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "7cbbd7",
+        "hash": "540cd513",
+        "encoded": "mvn%20spring-boot:run%20-Dspring-boot.run.jvmArguments=%22-Duser.timezone=Asia/Kolkata%22",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "7cbbd7",
+        "hash": "42c44123",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "7cbbd7",
+        "hash": "29fd5440",
+        "encoded": "**Why%20this%20helps:**",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "7cbbd7",
+        "hash": "3388f62e",
+        "encoded": "-%20Sets%20timezone%20at%20OS%20environment%20level",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "7cbbd7",
+        "hash": "6878f059",
+        "encoded": "-%20Sets%20JVM%20system%20property",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "7cbbd7",
+        "hash": "a0c858b5",
+        "encoded": "-%20Ensures%20consistency%20across%20development%20environments",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "7cbbd7",
+        "hash": "a535359d",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "7cbbd7",
+        "hash": "42f0876e",
+        "encoded": "##%20%F0%9F%8E%A8%20Defense%20in%20Depth%20Strategy",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "7cbbd7",
+        "hash": "af8a481b",
+        "encoded": "We%20implemented%20**4%20layers**%20of%20timezone%20configuration:",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "7cbbd7",
+        "hash": "dcb64610",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "7cbbd7",
+        "hash": "4ec4cb23",
+        "encoded": "Layer%201:%20JVM%20System%20Property%20(run-local%20scripts)",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "7cbbd7",
+        "hash": "c92b917f",
+        "encoded": "%E2%86%93",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "7cbbd7",
+        "hash": "023cd007",
+        "encoded": "Layer%202:%20Application%20Code%20(main%20method)",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "7cbbd7",
+        "hash": "df9f4c3e",
+        "encoded": "%E2%86%93",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "7cbbd7",
+        "hash": "5c8f583e",
+        "encoded": "Layer%203:%20JDBC%20URL%20Parameter%20(connection%20string)",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "7cbbd7",
+        "hash": "21419c35",
+        "encoded": "%E2%86%93",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "7cbbd7",
+        "hash": "20fb7137",
+        "encoded": "Layer%204:%20HikariCP%20Property%20(connection%20pool)",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "7cbbd7",
+        "hash": "9bf4a2a0",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "7cbbd7",
+        "hash": "45ac4c34",
+        "encoded": "If%20one%20layer%20fails,%20the%20others%20ensure%20correct%20timezone.",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "7cbbd7",
+        "hash": "d274b561",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "7cbbd7",
+        "hash": "b5794658",
+        "encoded": "##%20%E2%9C%85%20Verification%20Steps",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "7cbbd7",
+        "hash": "5454d816",
+        "encoded": "###%201.%20Check%20Application%20Logs",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "7cbbd7",
+        "hash": "66d97a1d",
+        "encoded": "When%20application%20starts,%20you%20should%20see:",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "7cbbd7",
+        "hash": "34ee810d",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "7cbbd7",
+        "hash": "873978a6",
+        "encoded": "Application%20Timezone:%20Asia/Kolkata",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "7cbbd7",
+        "hash": "3cd78f49",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "7cbbd7",
+        "hash": "abd0254b",
+        "encoded": "###%202.%20No%20PostgreSQL%20Errors",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "7cbbd7",
+        "hash": "0852fb52",
+        "encoded": "The%20following%20error%20should%20**NOT**%20appear:",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "7cbbd7",
+        "hash": "248bff5f",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "7cbbd7",
+        "hash": "8c3dea53",
+        "encoded": "FATAL:%20invalid%20value%20for%20parameter%20%22TimeZone%22:%20%22Asia/Calcutta%22",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "7cbbd7",
+        "hash": "b23b66af",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "7cbbd7",
+        "hash": "e490b079",
+        "encoded": "###%203.%20Successful%20Database%20Connection",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "7cbbd7",
+        "hash": "3f440a46",
+        "encoded": "You%20should%20see:",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "7cbbd7",
+        "hash": "46c7f2d1",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "7cbbd7",
+        "hash": "8f970e1e",
+        "encoded": "HikariPool-1%20-%20Start%20completed.",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "7cbbd7",
+        "hash": "c33118de",
+        "encoded": "Started%20OrderServiceApplication%20in%20X.XXX%20seconds",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "7cbbd7",
+        "hash": "22f49967",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "7cbbd7",
+        "hash": "97706dfc",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "7cbbd7",
+        "hash": "59928a88",
+        "encoded": "##%20%F0%9F%8C%8D%20Alternative:%20Using%20UTC%20(Production%20Recommendation)",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "7cbbd7",
+        "hash": "4f98eb3a",
+        "encoded": "For%20production%20environments,%20consider%20using%20UTC%20to%20avoid%20timezone-related%20issues:",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "7cbbd7",
+        "hash": "2cd06d33",
+        "encoded": "###%20Change%20Application%20Code:",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "7cbbd7",
+        "hash": "6ee60938",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "7cbbd7",
+        "hash": "5097534f",
+        "encoded": "public%20static%20void%20main(String%5B%5D%20args)%20%7B",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "7cbbd7",
+        "hash": "58f90e5d",
+        "encoded": "TimeZone.setDefault(TimeZone.getTimeZone(%22UTC%22));",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "7cbbd7",
+        "hash": "e647bedd",
+        "encoded": "SpringApplication.run(OrderServiceApplication.class,%20args);",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "7cbbd7",
+        "hash": "44e12b83",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "7cbbd7",
+        "hash": "63cdfae9",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "7cbbd7",
+        "hash": "b7494d2e",
+        "encoded": "###%20Update%20Configuration:",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "7cbbd7",
+        "hash": "6b2152bf",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "7cbbd7",
+        "hash": "ffe109ba",
+        "encoded": "spring:",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "7cbbd7",
+        "hash": "e41cd7b8",
+        "encoded": "datasource:",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "7cbbd7",
+        "hash": "519d3a38",
+        "encoded": "url:%20jdbc:postgresql://localhost:5432/orderDb?TimeZone=UTC",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "7cbbd7",
+        "hash": "b55a72f2",
+        "encoded": "hikari:",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "7cbbd7",
+        "hash": "fc885bd5",
+        "encoded": "data-source-properties:",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "7cbbd7",
+        "hash": "cd354ce5",
+        "encoded": "TimeZone:%20UTC",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "7cbbd7",
+        "hash": "47eaf8a8",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "7cbbd7",
+        "hash": "950cbb5c",
+        "encoded": "###%20Benefits:",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "7cbbd7",
+        "hash": "e714c615",
+        "encoded": "-%20No%20regional%20timezone%20complications",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "7cbbd7",
+        "hash": "34b8be86",
+        "encoded": "-%20Consistent%20across%20global%20deployments",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "7cbbd7",
+        "hash": "e5b4889c",
+        "encoded": "-%20Industry%20best%20practice%20for%20distributed%20systems",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "7cbbd7",
+        "hash": "9999f660",
+        "encoded": "-%20Easier%20debugging%20and%20log%20correlation",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "7cbbd7",
+        "hash": "a5a2852d",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "7cbbd7",
+        "hash": "4fd99032",
+        "encoded": "##%20%F0%9F%93%8A%20Impact%20Assessment",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "7cbbd7",
+        "hash": "4c677897",
+        "encoded": "###%20Before%20Fix:",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "7cbbd7",
+        "hash": "5c1467ca",
+        "encoded": "-%20%E2%9D%8C%20Application%20failed%20to%20start",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "7cbbd7",
+        "hash": "9746744a",
+        "encoded": "-%20%E2%9D%8C%20Database%20connection%20errors",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "7cbbd7",
+        "hash": "6848bc33",
+        "encoded": "-%20%E2%9D%8C%20No%20REST%20API%20access",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "7cbbd7",
+        "hash": "7e057d0b",
+        "encoded": "-%20%E2%9D%8C%20Development%20blocked",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "7cbbd7",
+        "hash": "3c138304",
+        "encoded": "###%20After%20Fix:",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "7cbbd7",
+        "hash": "85ea608b",
+        "encoded": "-%20%E2%9C%85%20Application%20starts%20successfully",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "7cbbd7",
+        "hash": "cfb40a93",
+        "encoded": "-%20%E2%9C%85%20Database%20connection%20established",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "7cbbd7",
+        "hash": "7bd554a0",
+        "encoded": "-%20%E2%9C%85%20REST%20API%20operational",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "7cbbd7",
+        "hash": "9a7b3b1b",
+        "encoded": "-%20%E2%9C%85%20Development%20can%20proceed",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "7cbbd7",
+        "hash": "81652f7b",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "7cbbd7",
+        "hash": "6f84256e",
+        "encoded": "##%20%F0%9F%94%8D%20Related%20Configuration",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "7cbbd7",
+        "hash": "b207c5f0",
+        "encoded": "###%20Files%20Modified:",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "7cbbd7",
+        "hash": "8100bf12",
+        "encoded": "1.%20**OrderServiceApplication.java**%20-%20Main%20timezone%20fix",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "7cbbd7",
+        "hash": "71cd65c6",
+        "encoded": "2.%20**application.yml**%20-%20JDBC%20URL%20and%20HikariCP%20properties",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "7cbbd7",
+        "hash": "c1145d8b",
+        "encoded": "3.%20**application-local.yml**%20-%20Local%20development%20timezone",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "7cbbd7",
+        "hash": "66906dc2",
+        "encoded": "4.%20**pom.xml**%20-%20Uncommented%20PostgreSQL%20driver",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "7cbbd7",
+        "hash": "c9eacf82",
+        "encoded": "###%20Files%20Created:",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "7cbbd7",
+        "hash": "6e92f180",
+        "encoded": "1.%20**run-local.bat**%20-%20Windows%20startup%20script",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "7cbbd7",
+        "hash": "8eeaa665",
+        "encoded": "2.%20**run-local.sh**%20-%20Linux/Mac%20startup%20script",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "7cbbd7",
+        "hash": "5cae0831",
+        "encoded": "3.%20**DATABASE_SETUP.md**%20-%20Database%20configuration%20guide",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "7cbbd7",
+        "hash": "2af332e7",
+        "encoded": "4.%20**TROUBLESHOOTING.md**%20-%20Common%20issues%20and%20solutions",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "7cbbd7",
+        "hash": "b8bce279",
+        "encoded": "5.%20**QUICK_START.md**%20-%20Quick%20reference%20guide",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "7cbbd7",
+        "hash": "0780c2ad",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "7cbbd7",
+        "hash": "90181716",
+        "encoded": "##%20%F0%9F%9A%80%20Running%20the%20Application",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "7cbbd7",
+        "hash": "0a335edd",
+        "encoded": "###%20Simple%20Method:",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "7cbbd7",
+        "hash": "7f648551",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "7cbbd7",
+        "hash": "cd2acab4",
+        "encoded": ".%5Crun-local.bat%20%20%20%20%20%20%20%20%20%20#%20Windows",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "7cbbd7",
+        "hash": "c1b5b169",
+        "encoded": "./run-local.sh%20%20%20%20%20%20%20%20%20%20%20#%20Linux/Mac",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "7cbbd7",
+        "hash": "b76731c7",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "7cbbd7",
+        "hash": "6cc29623",
+        "encoded": "###%20Manual%20Method:",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "7cbbd7",
+        "hash": "052a9375",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "7cbbd7",
+        "hash": "33db04b2",
+        "encoded": "mvn%20spring-boot:run%20-Dspring-boot.run.jvmArguments=%22-Duser.timezone=Asia/Kolkata%22%20-Dspring-boot.run.profiles=local",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "7cbbd7",
+        "hash": "d3779cab",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "7cbbd7",
+        "hash": "889839ec",
+        "encoded": "###%20Programmatic%20Method%20(now%20safe):",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "7cbbd7",
+        "hash": "ba03d137",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "7cbbd7",
+        "hash": "387c0eaf",
+        "encoded": "mvn%20spring-boot:run%20-Dspring-boot.run.profiles=local",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "7cbbd7",
+        "hash": "4781336d",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "7cbbd7",
+        "hash": "7c4031d7",
+        "encoded": "All%20methods%20work%20because%20timezone%20is%20set%20in%20application%20code!",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "7cbbd7",
+        "hash": "70cad52b",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "7cbbd7",
+        "hash": "6621fdcb",
+        "encoded": "##%20%F0%9F%8E%93%20Lessons%20Learned",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "7cbbd7",
+        "hash": "e32f483b",
+        "encoded": "1.%20**Timezone%20identifiers%20change**%20-%20%22Asia/Calcutta%22%20is%20deprecated,%20use%20%22Asia/Kolkata%22",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "7cbbd7",
+        "hash": "fd17f983",
+        "encoded": "2.%20**Set%20timezone%20early**%20-%20Before%20Spring%20Boot%20initializes%20beans",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "7cbbd7",
+        "hash": "bbb7d485",
+        "encoded": "3.%20**Multiple%20layers**%20-%20Defense%20in%20depth%20prevents%20failures",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "7cbbd7",
+        "hash": "4780f729",
+        "encoded": "4.%20**Explicit%20is%20better**%20-%20Don't%20rely%20on%20system%20defaults",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "7cbbd7",
+        "hash": "5cfc533c",
+        "encoded": "5.%20**Consider%20UTC**%20-%20For%20production,%20UTC%20is%20safest%20choice",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "7cbbd7",
+        "hash": "483b2cde",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "7cbbd7",
+        "hash": "edab22aa",
+        "encoded": "##%20%F0%9F%93%9A%20References",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "7cbbd7",
+        "hash": "591aed96",
+        "encoded": "-%20%5BIANA%20Timezone%20Database%5D(https://www.iana.org/time-zones)",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "7cbbd7",
+        "hash": "b0ddf4b0",
+        "encoded": "-%20%5BPostgreSQL%20TimeZone%20Documentation%5D(https://www.postgresql.org/docs/current/datatype-datetime.html#DATATYPE-TIMEZONES)",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "7cbbd7",
+        "hash": "cdb50353",
+        "encoded": "-%20%5BJava%20TimeZone%20Class%5D(https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TimeZone.html)",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "7cbbd7",
+        "hash": "e9abeffc",
+        "encoded": "-%20%5BHikariCP%20Configuration%5D(https://github.com/brettwooldridge/HikariCP#configuration-knobs-baby)",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "7cbbd7",
+        "hash": "4d9137ef",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "7cbbd7",
+        "hash": "0f2f97df",
+        "encoded": "##%20%E2%9C%A8%20Status:%20RESOLVED",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "7cbbd7",
+        "hash": "33aa7f92",
+        "encoded": "**Date:**%202026-08-11",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "7cbbd7",
+        "hash": "68fe03db",
+        "encoded": "**Issue:**%20PostgreSQL%20timezone%20error",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "7cbbd7",
+        "hash": "965ca0a3",
+        "encoded": "**Resolution:**%20Multi-layer%20timezone%20configuration",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "7cbbd7",
+        "hash": "00b632d6",
+        "encoded": "**Verification:**%20Application%20starts%20successfully%20with%20database%20connection",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "7cbbd7",
+        "hash": "34b625c1",
+        "encoded": "%F0%9F%8E%89%20**Problem%20Solved!**",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,576 @@
+{
+  "setup-check.bat": {
+    "filename": "setup-check.bat",
+    "path": "setup-check.bat",
+    "version": "1.2",
+    "contextFile": "57c7cc75-context.json",
+    "chunks": {
+      "cd6588": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786434364,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "771e6c07"
+        },
+        "hash": "9ac866cb",
+        "messageId": "system_2d316ab0-9558-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 1:16:04 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "cd6588",
+        "hash": "fbe49230",
+        "encoded": "@echo%20off",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "cd6588",
+        "hash": "28c7563f",
+        "encoded": "REM%20Environment%20setup%20checker",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "cd6588",
+        "hash": "479ef6f6",
+        "encoded": "echo%20========================================",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "cd6588",
+        "hash": "bade282f",
+        "encoded": "echo%20%20Order%20Service%20-%20Setup%20Checker",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "cd6588",
+        "hash": "188aea7a",
+        "encoded": "echo%20========================================",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "cd6588",
+        "hash": "aff27f06",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "cd6588",
+        "hash": "e4f37608",
+        "encoded": "set%20ERRORS=0",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "cd6588",
+        "hash": "336f103c",
+        "encoded": "REM%20Check%20Docker",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "cd6588",
+        "hash": "b9af5afd",
+        "encoded": "echo%20%5B1/5%5D%20Checking%20Docker...",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "cd6588",
+        "hash": "97d4acc2",
+        "encoded": "docker%20--version%20%3Enul%202%3E&1",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "cd6588",
+        "hash": "ec18ebb6",
+        "encoded": "if%20errorlevel%201%20(",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "cd6588",
+        "hash": "a05eb419",
+        "encoded": "echo%20%20%20%5BFAIL%5D%20Docker%20is%20not%20installed%20or%20not%20in%20PATH",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "cd6588",
+        "hash": "19ca1710",
+        "encoded": "set%20/a%20ERRORS+=1",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "cd6588",
+        "hash": "0051a0d2",
+        "encoded": ")%20else%20(",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "cd6588",
+        "hash": "7a6b64a3",
+        "encoded": "docker%20--version",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "cd6588",
+        "hash": "5628f605",
+        "encoded": "echo%20%20%20%5BOK%5D%20Docker%20is%20installed",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "cd6588",
+        "hash": "98327f2d",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "cd6588",
+        "hash": "442daf58",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "cd6588",
+        "hash": "a5e64e89",
+        "encoded": "REM%20Check%20Docker%20running",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "cd6588",
+        "hash": "e8c7d2d1",
+        "encoded": "echo%20%5B2/5%5D%20Checking%20Docker%20daemon...",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "cd6588",
+        "hash": "795c37b0",
+        "encoded": "docker%20ps%20%3Enul%202%3E&1",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "cd6588",
+        "hash": "bcad5320",
+        "encoded": "if%20errorlevel%201%20(",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "cd6588",
+        "hash": "abc0b362",
+        "encoded": "echo%20%20%20%5BFAIL%5D%20Docker%20daemon%20is%20not%20running",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "cd6588",
+        "hash": "9f912f91",
+        "encoded": "echo%20%20%20%5BINFO%5D%20Please%20start%20Docker%20Desktop",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "cd6588",
+        "hash": "5debca75",
+        "encoded": "set%20/a%20ERRORS+=1",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "cd6588",
+        "hash": "8c386d51",
+        "encoded": ")%20else%20(",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "cd6588",
+        "hash": "3ed84cfd",
+        "encoded": "echo%20%20%20%5BOK%5D%20Docker%20daemon%20is%20running",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "cd6588",
+        "hash": "c3399f39",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "cd6588",
+        "hash": "504fb2bf",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "cd6588",
+        "hash": "286b5a4d",
+        "encoded": "REM%20Check%20Java",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "cd6588",
+        "hash": "31d5fec1",
+        "encoded": "echo%20%5B3/5%5D%20Checking%20Java...",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "cd6588",
+        "hash": "b5ca27c9",
+        "encoded": "java%20-version%20%3Enul%202%3E&1",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "cd6588",
+        "hash": "f86044f3",
+        "encoded": "if%20errorlevel%201%20(",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "cd6588",
+        "hash": "70b6066d",
+        "encoded": "echo%20%20%20%5BFAIL%5D%20Java%20is%20not%20installed%20or%20not%20in%20PATH",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "cd6588",
+        "hash": "8981680a",
+        "encoded": "set%20/a%20ERRORS+=1",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "cd6588",
+        "hash": "8ed6b3f3",
+        "encoded": ")%20else%20(",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "cd6588",
+        "hash": "33962308",
+        "encoded": "java%20-version%202%3E&1%20%7C%20findstr%20%22version%22",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "cd6588",
+        "hash": "3bb1b550",
+        "encoded": "echo%20%20%20%5BOK%5D%20Java%20is%20installed",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "cd6588",
+        "hash": "de9a7b90",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "cd6588",
+        "hash": "eb7c748e",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "cd6588",
+        "hash": "c6de21c1",
+        "encoded": "REM%20Check%20Maven",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "cd6588",
+        "hash": "9265dcd4",
+        "encoded": "echo%20%5B4/5%5D%20Checking%20Maven...",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "cd6588",
+        "hash": "acbd3ea6",
+        "encoded": "mvn%20--version%20%3Enul%202%3E&1",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "cd6588",
+        "hash": "57709177",
+        "encoded": "if%20errorlevel%201%20(",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "cd6588",
+        "hash": "5b4a5591",
+        "encoded": "echo%20%20%20%5BFAIL%5D%20Maven%20is%20not%20installed%20or%20not%20in%20PATH",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "cd6588",
+        "hash": "2ca62884",
+        "encoded": "set%20/a%20ERRORS+=1",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "cd6588",
+        "hash": "0b38f6a8",
+        "encoded": ")%20else%20(",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "cd6588",
+        "hash": "f6b3e5b2",
+        "encoded": "mvn%20--version%20%7C%20findstr%20%22Apache%20Maven%22",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "cd6588",
+        "hash": "3c4726d5",
+        "encoded": "echo%20%20%20%5BOK%5D%20Maven%20is%20installed",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "cd6588",
+        "hash": "1adf780b",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "cd6588",
+        "hash": "81afc5ca",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "cd6588",
+        "hash": "e27b3196",
+        "encoded": "REM%20Check%20ports",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "cd6588",
+        "hash": "b0883663",
+        "encoded": "echo%20%5B5/5%5D%20Checking%20required%20ports...",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "cd6588",
+        "hash": "e49353b8",
+        "encoded": "set%20PORT_ERRORS=0",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "cd6588",
+        "hash": "e52370e9",
+        "encoded": "netstat%20-ano%20%7C%20findstr%20%22:5432%22%20%3Enul%202%3E&1",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "cd6588",
+        "hash": "e0817f48",
+        "encoded": "if%20not%20errorlevel%201%20(",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "cd6588",
+        "hash": "29959647",
+        "encoded": "echo%20%20%20%5BWARN%5D%20Port%205432%20(PostgreSQL)%20is%20already%20in%20use",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "cd6588",
+        "hash": "ca3086e3",
+        "encoded": "set%20/a%20PORT_ERRORS+=1",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "cd6588",
+        "hash": "e9467d36",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "cd6588",
+        "hash": "12c4768d",
+        "encoded": "netstat%20-ano%20%7C%20findstr%20%22:9092%22%20%3Enul%202%3E&1",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "cd6588",
+        "hash": "d3e19a9c",
+        "encoded": "if%20not%20errorlevel%201%20(",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "cd6588",
+        "hash": "f97df6a0",
+        "encoded": "echo%20%20%20%5BWARN%5D%20Port%209092%20(Kafka)%20is%20already%20in%20use",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "cd6588",
+        "hash": "30dcdff9",
+        "encoded": "set%20/a%20PORT_ERRORS+=1",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "cd6588",
+        "hash": "1af0603e",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "cd6588",
+        "hash": "a5c4685c",
+        "encoded": "netstat%20-ano%20%7C%20findstr%20%22:8083%22%20%3Enul%202%3E&1",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "cd6588",
+        "hash": "78081aeb",
+        "encoded": "if%20not%20errorlevel%201%20(",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "cd6588",
+        "hash": "491418f1",
+        "encoded": "echo%20%20%20%5BWARN%5D%20Port%208083%20(Order%20Service)%20is%20already%20in%20use",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "cd6588",
+        "hash": "3b94672d",
+        "encoded": "set%20/a%20PORT_ERRORS+=1",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "cd6588",
+        "hash": "d1263284",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "cd6588",
+        "hash": "9704185c",
+        "encoded": "if%20%25PORT_ERRORS%25==0%20(",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "cd6588",
+        "hash": "c4af0154",
+        "encoded": "echo%20%20%20%5BOK%5D%20All%20required%20ports%20are%20available",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "cd6588",
+        "hash": "d8b56883",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "cd6588",
+        "hash": "f198df07",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "cd6588",
+        "hash": "0566d893",
+        "encoded": "REM%20Summary",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "cd6588",
+        "hash": "a21eb5f4",
+        "encoded": "echo%20========================================",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "cd6588",
+        "hash": "cf64fd9e",
+        "encoded": "echo%20%20Summary",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "cd6588",
+        "hash": "a28ca750",
+        "encoded": "echo%20========================================",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "cd6588",
+        "hash": "6834331e",
+        "encoded": "if%20%25ERRORS%25==0%20(",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "cd6588",
+        "hash": "5c37108d",
+        "encoded": "echo%20%20%20%5BOK%5D%20All%20checks%20passed!",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "cd6588",
+        "hash": "f9505e7a",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "cd6588",
+        "hash": "5a140c0c",
+        "encoded": "echo%20%20%20Next%20steps:",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "cd6588",
+        "hash": "bae374b8",
+        "encoded": "echo%20%20%201.%20Run:%20.%5Cstart-all.bat",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "cd6588",
+        "hash": "82b4b31d",
+        "encoded": "echo%20%20%202.%20Wait%20for%20services%20to%20start",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "cd6588",
+        "hash": "010e4f09",
+        "encoded": "echo%20%20%203.%20Open%20http://localhost:8083/swagger-ui.html",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "cd6588",
+        "hash": "3e59dcac",
+        "encoded": ")%20else%20(",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "cd6588",
+        "hash": "6d31bfc7",
+        "encoded": "echo%20%20%20%5BFAIL%5D%20%25ERRORS%25%20check(s)%20failed",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "cd6588",
+        "hash": "d196a3a4",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "cd6588",
+        "hash": "4337ba1c",
+        "encoded": "echo%20%20%20Please%20fix%20the%20issues%20above%20and%20try%20again.",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "cd6588",
+        "hash": "b2a74a31",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "cd6588",
+        "hash": "a62163d4",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "cd6588",
+        "hash": "4190c845",
+        "encoded": "pause",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

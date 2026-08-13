@@ -1,0 +1,52 @@
+{
+  "filename": "application-local.yml",
+  "path": "src\\main\\resources\\application-local.yml",
+  "version": "1.1",
+  "files": {
+    "645e8594": {
+      "value": [
+        {
+          "programming_language": "YAML",
+          "fileName": "db-docker-compose.yml",
+          "relativeFilePath": "c:\\Users\\prasingh80\\Music\\Legacy\\MS Legacy\\db-docker-compose.yml",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            33
+          ]
+        }
+      ]
+    },
+    "f51fa6ad": {
+      "value": [
+        {
+          "programming_language": "Java",
+          "fileName": "OrderServiceApplication.java",
+          "relativeFilePath": "src/main/java/com/ecommerce/order/OrderServiceApplication.java",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            12
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "d936a9dd": {
+      "value": "how to access this db in my spring boot application"
+    },
+    "b06f0df0": {
+      "value": "2026-08-11 12:17:46.195 [main] [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer\n2026-08-11 12:17:46.236 [main] [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...\n2026-08-11 12:17:47.418 [main] [] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.\norg.postgresql.util.PSQLException: FATAL: invalid value for parameter \"TimeZone\": \"Asia/Calcutta\"\n        at org.postgresql.core.v3.Q"
+    },
+    "b9ce3e58": {
+      "value": "current application is giving error \n2026-08-11 12:21:15.002 [main] [] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - FATAL: invalid value for parameter \"TimeZone\": \"Asia/Calcutta\"\n2026-08-11 12:21:15.010 [main] [] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.DataException: Unable to open JDBC Connection for DDL execution [FATAL: inv"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

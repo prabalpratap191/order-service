@@ -1,0 +1,15 @@
+{
+  "filename": "run-local.sh",
+  "path": "run-local.sh",
+  "version": "1.1",
+  "files": {},
+  "promptMessage": {
+    "b9ce3e58": {
+      "value": "current application is giving error \n2026-08-11 12:21:15.002 [main] [] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - FATAL: invalid value for parameter \"TimeZone\": \"Asia/Calcutta\"\n2026-08-11 12:21:15.010 [main] [] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.DataException: Unable to open JDBC Connection for DDL execution [FATAL: inv"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

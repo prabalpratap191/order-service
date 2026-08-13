@@ -1,0 +1,120 @@
+{
+  "stop-all.bat": {
+    "filename": "stop-all.bat",
+    "path": "stop-all.bat",
+    "version": "1.2",
+    "contextFile": "d763843c-context.json",
+    "chunks": {
+      "14b501": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786434272,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "771e6c07"
+        },
+        "hash": "a8382fc0",
+        "messageId": "system_2d316ab0-9558-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 1:14:32 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "14b501",
+        "hash": "fbe49230",
+        "encoded": "@echo%20off",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "14b501",
+        "hash": "ad497aa0",
+        "encoded": "REM%20Stop%20all%20Docker%20services",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "14b501",
+        "hash": "479ef6f6",
+        "encoded": "echo%20========================================",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "14b501",
+        "hash": "9ddf9bfa",
+        "encoded": "echo%20%20Stopping%20All%20Services",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "14b501",
+        "hash": "188aea7a",
+        "encoded": "echo%20========================================",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "14b501",
+        "hash": "aff27f06",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "14b501",
+        "hash": "02987fbc",
+        "encoded": "echo%20Stopping%20full%20stack...",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "14b501",
+        "hash": "d89844ee",
+        "encoded": "cd%20..",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "14b501",
+        "hash": "cb3f6c19",
+        "encoded": "docker-compose%20-f%20full-stack-docker-compose.yml%20stop",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "14b501",
+        "hash": "90b3212f",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "14b501",
+        "hash": "51dbf247",
+        "encoded": "echo%20All%20services%20stopped.",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "14b501",
+        "hash": "f7de9594",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "14b501",
+        "hash": "999b24cc",
+        "encoded": "echo%20To%20start%20again,%20run:%20start-all.bat",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "14b501",
+        "hash": "9515cdbf",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "14b501",
+        "hash": "14cc0c83",
+        "encoded": "pause",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

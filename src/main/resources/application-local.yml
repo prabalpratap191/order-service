@@ -1,0 +1,25 @@
+# Local development profile configuration
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/orderDb?TimeZone=Asia/Kolkata
+    username: pgadmin
+    password: pgadminpass
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  kafka:
+    # Make Kafka optional for local development
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration
+
+logging:
+  level:
+    com.ecommerce.order: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    # Reduce Kafka noise when not running
+    org.apache.kafka: WARN
+    org.springframework.kafka: WARN

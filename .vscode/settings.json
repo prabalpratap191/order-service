@@ -1,0 +1,6 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "Slingshot.readFileLineLimit": 3000,
+    "Slingshot.enableAutomaticCreationOfFilesWithFilenameClick": true,
+    "java.configuration.updateBuildConfiguration": "interactive"
+}

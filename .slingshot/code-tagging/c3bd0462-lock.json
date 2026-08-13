@@ -1,0 +1,96 @@
+{
+  "run-local.bat": {
+    "filename": "run-local.bat",
+    "path": "run-local.bat",
+    "version": "1.2",
+    "contextFile": "c3bd0462-context.json",
+    "chunks": {
+      "76a3b7": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786433845,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "b9ce3e58"
+        },
+        "hash": "7b2d3187",
+        "messageId": "system_6a48b800-9557-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 1:07:25 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "76a3b7",
+        "hash": "fbe49230",
+        "encoded": "@echo%20off",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "76a3b7",
+        "hash": "0cb5e4f3",
+        "encoded": "REM%20Windows%20batch%20script%20to%20run%20the%20application%20with%20correct%20timezone",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "76a3b7",
+        "hash": "deee4dad",
+        "encoded": "echo%20Starting%20Order%20Service%20with%20Asia/Kolkata%20timezone...",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "76a3b7",
+        "hash": "e7d344b5",
+        "encoded": "echo.",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "76a3b7",
+        "hash": "cc34b540",
+        "encoded": "REM%20Set%20timezone%20environment%20variable",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "76a3b7",
+        "hash": "fb42af86",
+        "encoded": "set%20TZ=Asia/Kolkata",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "76a3b7",
+        "hash": "2ebdb87f",
+        "encoded": "REM%20Set%20JVM%20timezone%20argument",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "76a3b7",
+        "hash": "586318fa",
+        "encoded": "set%20JAVA_OPTS=-Duser.timezone=Asia/Kolkata",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "76a3b7",
+        "hash": "5614b0bd",
+        "encoded": "REM%20Run%20Maven%20with%20timezone%20argument",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "76a3b7",
+        "hash": "7f9b70d6",
+        "encoded": "mvn%20spring-boot:run%20-Dspring-boot.run.jvmArguments=%22-Duser.timezone=Asia/Kolkata%22%20-Dspring-boot.run.profiles=local",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "76a3b7",
+        "hash": "46352bea",
+        "encoded": "pause",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "filename": "application-local-with-kafka.yml",
+  "path": "src\\main\\resources\\application-local-with-kafka.yml",
+  "version": "1.1",
+  "files": {},
+  "promptMessage": {
+    "771e6c07": {
+      "value": "how to run kafka server on docker using docker compose"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

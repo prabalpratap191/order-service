@@ -1,0 +1,18 @@
+{
+  "filename": "pom.xml",
+  "path": "pom.xml",
+  "version": "1.1",
+  "files": {},
+  "promptMessage": {
+    "4ceb14a2": {
+      "value": "docker compose up -d db-docker-compose.yml\nno configuration file provided: not found"
+    },
+    "2b7ab35a": {
+      "value": "ocker compose -f db-docker-compose.yml up -d\ntime=\"2026-08-11T10:29:06+05:30\" level=warning msg=\"C:\\\\Users\\\\prasingh80\\\\Music\\\\Legacy\\\\MS Legacy\\\\db-docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion\"\nunable to get image 'ecom/catalog-service:latest': failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEng"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

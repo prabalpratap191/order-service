@@ -1,0 +1,582 @@
+{
+  "README.md": {
+    "filename": "README.md",
+    "path": "README.md",
+    "version": "1.2",
+    "contextFile": "7d7ba11e-context.json",
+    "chunks": {
+      "d77086": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786434341,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "771e6c07"
+        },
+        "hash": "77f00eef",
+        "messageId": "system_2d316ab0-9558-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 1:15:41 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "d77086",
+        "hash": "54c7ba79",
+        "encoded": "#%20Order%20Service",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "d77086",
+        "hash": "6499a1f6",
+        "encoded": "Spring%20Boot%203.x%20microservice%20for%20Order%20Management,%20migrated%20from%20legacy%20Jakarta%20EE%20Order%20Management%20Module.",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "d77086",
+        "hash": "ffcbfb60",
+        "encoded": "##%20%F0%9F%9A%80%20Quick%20Start",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "d77086",
+        "hash": "fe8ca546",
+        "encoded": "###%20Start%20Everything%20(Recommended)",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "d77086",
+        "hash": "7796e97b",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "d77086",
+        "hash": "cb5e1325",
+        "encoded": "#%20Windows",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "d77086",
+        "hash": "bb3e0fe1",
+        "encoded": ".%5Cstart-all.bat",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "d77086",
+        "hash": "043662e3",
+        "encoded": "#%20Linux/Mac",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "d77086",
+        "hash": "81b939d9",
+        "encoded": "./start-all.sh",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "d77086",
+        "hash": "585a461f",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "d77086",
+        "hash": "35ea8cf6",
+        "encoded": "This%20starts%20PostgreSQL,%20Kafka,%20and%20the%20Order%20Service%20in%20one%20command!",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "d77086",
+        "hash": "172ad4ca",
+        "encoded": "###%20Alternative:%20Manual%20Start",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "d77086",
+        "hash": "8d900de2",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "d77086",
+        "hash": "351307b6",
+        "encoded": "#%201.%20Start%20infrastructure",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "d77086",
+        "hash": "c4fde753",
+        "encoded": "cd%20..",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "d77086",
+        "hash": "232ab630",
+        "encoded": "docker-compose%20-f%20full-stack-docker-compose.yml%20up%20-d",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "d77086",
+        "hash": "30804113",
+        "encoded": "#%202.%20Run%20application",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "d77086",
+        "hash": "eef87fcb",
+        "encoded": "cd%20order-service",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "d77086",
+        "hash": "f47bd3b2",
+        "encoded": ".%5Crun-local.bat",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "d77086",
+        "hash": "d7b9acaf",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "d77086",
+        "hash": "4269f498",
+        "encoded": "##%20%F0%9F%93%9A%20Documentation",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "d77086",
+        "hash": "d3075da8",
+        "encoded": "-%20**%5BQUICK_START.md%5D(QUICK_START.md)**%20-%20Get%20started%20in%205%20minutes",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "d77086",
+        "hash": "8177f960",
+        "encoded": "-%20**%5BDATABASE_SETUP.md%5D(DATABASE_SETUP.md)**%20-%20PostgreSQL%20setup%20and%20configuration",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "d77086",
+        "hash": "3e812213",
+        "encoded": "-%20**%5BKAFKA_SETUP.md%5D(KAFKA_SETUP.md)**%20-%20Kafka%20setup%20with%20Docker%20Compose",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "d77086",
+        "hash": "e84f104c",
+        "encoded": "-%20**%5BKAFKA_QUICK_REFERENCE.md%5D(KAFKA_QUICK_REFERENCE.md)**%20-%20Kafka%20command%20cheat%20sheet",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "d77086",
+        "hash": "6e33210d",
+        "encoded": "-%20**%5BTROUBLESHOOTING.md%5D(TROUBLESHOOTING.md)**%20-%20Common%20issues%20and%20solutions",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "d77086",
+        "hash": "2b232bbf",
+        "encoded": "-%20**%5BTIMEZONE_FIX_SUMMARY.md%5D(TIMEZONE_FIX_SUMMARY.md)**%20-%20Timezone%20configuration%20details",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "d77086",
+        "hash": "fd8d1701",
+        "encoded": "##%20Legacy%20Mapping",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "d77086",
+        "hash": "8bb957d9",
+        "encoded": "-%20Legacy%20Module:%20Order%20Management",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "d77086",
+        "hash": "eeaf3b24",
+        "encoded": "-%20Legacy%20Classes:%20CreateOrderCommand,%20OrderManagementFlowCommandExecutor,%20OrderVO",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "d77086",
+        "hash": "d680cace",
+        "encoded": "-%20Legacy%20Tables:%20ORDER,%20ORDER_ITEM",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "d77086",
+        "hash": "0a557013",
+        "encoded": "##%20Tech%20Stack",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "d77086",
+        "hash": "608b7da3",
+        "encoded": "-%20Java%2017",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "d77086",
+        "hash": "8fe7841c",
+        "encoded": "-%20Spring%20Boot%203.2.5",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "d77086",
+        "hash": "df2d0028",
+        "encoded": "-%20PostgreSQL%20(via%20Docker)",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "d77086",
+        "hash": "7e4f3a90",
+        "encoded": "-%20Apache%20Kafka%20(via%20Docker)",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "d77086",
+        "hash": "434dd063",
+        "encoded": "-%20Docker%20Compose",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "d77086",
+        "hash": "d6101004",
+        "encoded": "##%20%F0%9F%94%97%20Service%20URLs",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "d77086",
+        "hash": "7b1ebe40",
+        "encoded": "%7C%20Service%20%7C%20URL%20%7C%20Credentials%20%7C",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "d77086",
+        "hash": "844e8118",
+        "encoded": "%7C---------%7C-----%7C-------------%7C",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "d77086",
+        "hash": "91a09696",
+        "encoded": "%7C%20Order%20Service%20%7C%20http://localhost:8083%20%7C%20-%20%7C",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "d77086",
+        "hash": "a45de6cb",
+        "encoded": "%7C%20Swagger%20UI%20%7C%20http://localhost:8083/swagger-ui.html%20%7C%20-%20%7C",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "d77086",
+        "hash": "43a396ac",
+        "encoded": "%7C%20Health%20Check%20%7C%20http://localhost:8083/actuator/health%20%7C%20-%20%7C",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "d77086",
+        "hash": "20f28ecd",
+        "encoded": "%7C%20Kafka%20UI%20%7C%20http://localhost:8090%20%7C%20-%20%7C",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "d77086",
+        "hash": "17c1678a",
+        "encoded": "%7C%20pgAdmin%20%7C%20http://localhost:8080%20%7C%20ppsingh.singh2@gmail.com%20/%20pgadminpass%20%7C",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "d77086",
+        "hash": "9cfcd382",
+        "encoded": "%7C%20PostgreSQL%20%7C%20localhost:5432%20%7C%20pgadmin%20/%20pgadminpass%20%7C",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "d77086",
+        "hash": "c749f58d",
+        "encoded": "##%20Build%20&%20Run",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "d77086",
+        "hash": "bf03ff86",
+        "encoded": "###%20Development%20(with%20Kafka)",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "d77086",
+        "hash": "d17a2743",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "d77086",
+        "hash": "4406fd2e",
+        "encoded": "mvn%20clean%20package",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "d77086",
+        "hash": "4f153bab",
+        "encoded": "mvn%20spring-boot:run%20-Dspring-boot.run.profiles=local-with-kafka",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "d77086",
+        "hash": "7b8bac46",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "d77086",
+        "hash": "01358be2",
+        "encoded": "###%20Development%20(without%20Kafka)",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "d77086",
+        "hash": "d8484db5",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "d77086",
+        "hash": "f767213a",
+        "encoded": "mvn%20clean%20package",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "d77086",
+        "hash": "6f7afe67",
+        "encoded": ".%5Crun-local.bat",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "d77086",
+        "hash": "d2d592b3",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "d77086",
+        "hash": "10ca8677",
+        "encoded": "###%20Production%20Build",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "d77086",
+        "hash": "d4634994",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "d77086",
+        "hash": "ae4d9fce",
+        "encoded": "mvn%20clean%20package",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "d77086",
+        "hash": "42c92693",
+        "encoded": "java%20-jar%20target/order-service-1.0.0.jar",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "d77086",
+        "hash": "59260015",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "d77086",
+        "hash": "5db17f1e",
+        "encoded": "##%20Docker",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "d77086",
+        "hash": "bee983ba",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "d77086",
+        "hash": "67b27a5d",
+        "encoded": "docker%20build%20-t%20order-service%20.",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "d77086",
+        "hash": "ac327462",
+        "encoded": "docker%20run%20-p%208083:8083%20order-service",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "d77086",
+        "hash": "a9cec825",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "d77086",
+        "hash": "a788f7e2",
+        "encoded": "##%20API%20Endpoints",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "d77086",
+        "hash": "0de5e95a",
+        "encoded": "-%20POST%20/api/v1/orders%20-%20Create%20a%20new%20order",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "d77086",
+        "hash": "518c897b",
+        "encoded": "-%20GET%20/api/v1/orders/%7BorderId%7D%20-%20Get%20order%20by%20ID",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "d77086",
+        "hash": "96e2f7f0",
+        "encoded": "-%20GET%20/api/v1/orders/customer/%7BcustomerId%7D%20-%20Get%20orders%20by%20customer",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "d77086",
+        "hash": "ada1d71e",
+        "encoded": "-%20PUT%20/api/v1/orders/%7BorderId%7D/status%20-%20Update%20order%20status",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "d77086",
+        "hash": "7fb1575a",
+        "encoded": "-%20POST%20/api/v1/orders/%7BorderId%7D/cancel%20-%20Cancel%20an%20order",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "d77086",
+        "hash": "736164ad",
+        "encoded": "##%20Kafka%20Topics",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "d77086",
+        "hash": "63ff0ba1",
+        "encoded": "-%20**order.created**%20-%20Published%20when%20a%20new%20order%20is%20created",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "d77086",
+        "hash": "5123f340",
+        "encoded": "-%20**order.updated**%20-%20Published%20when%20an%20order%20status%20is%20updated",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "d77086",
+        "hash": "7df87079",
+        "encoded": "##%20%F0%9F%A7%AA%20Example:%20Create%20Order",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "d77086",
+        "hash": "fd04271e",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "d77086",
+        "hash": "d70d1440",
+        "encoded": "curl%20-X%20POST%20http://localhost:8083/api/orders%20%5C",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "d77086",
+        "hash": "c042925c",
+        "encoded": "-H%20%22Content-Type:%20application/json%22%20%5C",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "d77086",
+        "hash": "be8e4113",
+        "encoded": "-d%20'%7B",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "d77086",
+        "hash": "5a720e9f",
+        "encoded": "%22customerId%22:%20%22CUST001%22,",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "d77086",
+        "hash": "e35c39a2",
+        "encoded": "%22items%22:%20%5B",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "d77086",
+        "hash": "bf9dabf7",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "d77086",
+        "hash": "c40695c8",
+        "encoded": "%22productId%22:%20%22PROD001%22,",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "d77086",
+        "hash": "5aee8bba",
+        "encoded": "%22quantity%22:%202,",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "d77086",
+        "hash": "73a620cc",
+        "encoded": "%22price%22:%2029.99",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "d77086",
+        "hash": "7e03f6ac",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "d77086",
+        "hash": "967f5497",
+        "encoded": "%5D",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "d77086",
+        "hash": "1d587b39",
+        "encoded": "%7D'",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "d77086",
+        "hash": "2c0ea294",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "d77086",
+        "hash": "11343610",
+        "encoded": "Then%20check%20Kafka%20UI%20(http://localhost:8090)%20to%20see%20the%20event!",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

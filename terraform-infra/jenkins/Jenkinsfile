@@ -1,0 +1,264 @@
+#!/usr/bin/env groovy
+
+@Library('shared-library') _
+
+def serviceName = 'order-service'
+def region = 'us-east-1'
+def environment = 'dev'
+def ecrRegistry = "${env.AWS_ACCOUNT_ID}.dkr.ecr.${region}.amazonaws.com"
+def imageTag = "${env.BUILD_NUMBER}"
+
+pipeline {
+    agent {
+        kubernetes {
+            yaml """
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    jenkins: agent
+spec:
+  serviceAccountName: jenkins
+  containers:
+  - name: docker
+    image: docker:24-dind
+    command:
+    - cat
+    tty: true
+    volumeMounts:
+    - name: docker-sock
+      mountPath: /var/run/docker.sock
+    securityContext:
+      privileged: true
+  - name: kubectl
+    image: bitnami/kubectl:latest
+    command:
+    - cat
+    tty: true
+  - name: helm
+    image: alpine/helm:latest
+    command:
+    - cat
+    tty: true
+  - name: maven
+    image: maven:3.9-eclipse-temurin-17
+    command:
+    - cat
+    tty: true
+    volumeMounts:
+    - name: maven-cache
+      mountPath: /root/.m2
+  volumes:
+  - name: docker-sock
+    hostPath:
+      path: /var/run/docker.sock
+  - name: maven-cache
+    emptyDir: {}
+"""
+        }
+    }
+    
+    environment {
+        AWS_REGION = "${region}"
+        ECR_REGISTRY = "${ecrRegistry}"
+        IMAGE_NAME = "${environment}/${serviceName}"
+        IMAGE_TAG = "${imageTag}"
+        HELM_CHART_PATH = "./terraform-infra/helm-charts/${serviceName}"
+        KUBECONFIG = credentials('kubeconfig')
+    }
+    
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        timeout(time: 30, unit: 'MINUTES')
+        timestamps()
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+                script {
+                    env.GIT_COMMIT_SHORT = sh(
+                        returnStdout: true,
+                        script: 'git rev-parse --short HEAD'
+                    ).trim()
+                }
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                container('maven') {
+                    sh '''
+                        echo "Building ${serviceName}..."
+                        mvn clean package -DskipTests
+                    '''
+                }
+            }
+        }
+        
+        stage('Unit Tests') {
+            steps {
+                container('maven') {
+                    sh '''
+                        echo "Running unit tests..."
+                        mvn test
+                    '''
+                }
+            }
+            post {
+                always {
+                    junit '**/target/surefire-reports/*.xml'
+                    publishHTML([
+                        reportDir: 'target/site/jacoco',
+                        reportFiles: 'index.html',
+                        reportName: 'Code Coverage Report'
+                    ])
+                }
+            }
+        }
+        
+        stage('Code Quality') {
+            steps {
+                container('maven') {
+                    sh '''
+                        echo "Running code quality checks..."
+                        mvn sonar:sonar \
+                            -Dsonar.projectKey=${serviceName} \
+                            -Dsonar.host.url=${SONAR_HOST_URL} \
+                            -Dsonar.login=${SONAR_TOKEN}
+                    '''
+                }
+            }
+        }
+        
+        stage('Build Docker Image') {
+            steps {
+                container('docker') {
+                    withAWS(credentials: 'aws-credentials', region: "${region}") {
+                        sh '''
+                            echo "Building Docker image..."
+                            docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
+                            docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG}
+                            docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${ECR_REGISTRY}/${IMAGE_NAME}:latest
+                        '''
+                    }
+                }
+            }
+        }
+        
+        stage('Security Scan') {
+            steps {
+                container('docker') {
+                    sh '''
+                        echo "Scanning Docker image for vulnerabilities..."
+                        # Using Trivy for vulnerability scanning
+                        docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
+                            aquasec/trivy:latest image --severity HIGH,CRITICAL \
+                            ${IMAGE_NAME}:${IMAGE_TAG}
+                    '''
+                }
+            }
+        }
+        
+        stage('Push to ECR') {
+            steps {
+                container('docker') {
+                    withAWS(credentials: 'aws-credentials', region: "${region}") {
+                        sh '''
+                            echo "Pushing image to ECR..."
+                            aws ecr get-login-password --region ${AWS_REGION} | \
+                                docker login --username AWS --password-stdin ${ECR_REGISTRY}
+                            
+                            docker push ${ECR_REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG}
+                            docker push ${ECR_REGISTRY}/${IMAGE_NAME}:latest
+                        '''
+                    }
+                }
+            }
+        }
+        
+        stage('Update Helm Values') {
+            steps {
+                sh """
+                    echo "Updating Helm values with new image tag..."
+                    sed -i 's|repository:.*|repository: ${ECR_REGISTRY}/${IMAGE_NAME}|' ${HELM_CHART_PATH}/values.yaml
+                    sed -i 's|tag:.*|tag: "${IMAGE_TAG}"|' ${HELM_CHART_PATH}/values.yaml
+                """
+            }
+        }
+        
+        stage('Deploy to Kubernetes') {
+            steps {
+                container('helm') {
+                    withAWS(credentials: 'aws-credentials', region: "${region}") {
+                        sh """
+                            echo "Deploying ${serviceName} to Kubernetes..."
+                            
+                            # Update kubeconfig
+                            aws eks update-kubeconfig --region ${AWS_REGION} --name ecommerce-${environment}-eks
+                            
+                            # Deploy using Helm
+                            helm upgrade --install ${serviceName} ${HELM_CHART_PATH} \
+                                --namespace default \
+                                --set image.repository=${ECR_REGISTRY}/${IMAGE_NAME} \
+                                --set image.tag=${IMAGE_TAG} \
+                                --wait --timeout 5m
+                        """
+                    }
+                }
+            }
+        }
+        
+        stage('Health Check') {
+            steps {
+                container('kubectl') {
+                    sh """
+                        echo "Waiting for deployment to be ready..."
+                        kubectl rollout status deployment/${serviceName} -n default --timeout=5m
+                        
+                        echo "Checking pod health..."
+                        kubectl get pods -l app.kubernetes.io/name=${serviceName} -n default
+                        
+                        echo "Checking service endpoint..."
+                        kubectl get svc ${serviceName} -n default
+                    """
+                }
+            }
+        }
+        
+        stage('Integration Tests') {
+            steps {
+                container('maven') {
+                    sh '''
+                        echo "Running integration tests..."
+                        # Run integration tests against deployed service
+                        mvn verify -Pintegration-tests
+                    '''
+                }
+            }
+        }
+    }
+    
+    post {
+        success {
+            echo "Pipeline completed successfully!"
+            // Send notification
+            slackSend(
+                color: 'good',
+                message: "Successfully deployed ${serviceName} version ${IMAGE_TAG} to ${environment}"
+            )
+        }
+        failure {
+            echo "Pipeline failed!"
+            // Send notification
+            slackSend(
+                color: 'danger',
+                message: "Failed to deploy ${serviceName} version ${IMAGE_TAG} to ${environment}"
+            )
+        }
+        always {
+            cleanWs()
+        }
+    }
+}

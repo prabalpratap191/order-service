@@ -1,0 +1,43 @@
+# AWS Configuration
+aws_region = "us-east-1"
+environment = "dev"
+project_name = "ecommerce"
+
+# VPC Configuration
+vpc_cidr = "10.0.0.0/16"
+availability_zones = ["us-east-1a", "us-east-1b"]
+public_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]
+private_subnet_cidrs = ["10.0.10.0/24", "10.0.11.0/24"]
+enable_nat_gateway = true
+single_nat_gateway = true  # Use single NAT for dev to save costs
+
+# EKS Configuration
+eks_cluster_version = "1.28"
+eks_node_groups = {
+  general = {
+    desired_size   = 2
+    min_size       = 1
+    max_size       = 4
+    instance_types = ["t3.medium"]
+    capacity_type  = "ON_DEMAND"
+    disk_size      = 50
+    labels = {
+      role = "general"
+    }
+  }
+}
+enable_cluster_autoscaler = false  # Disable for dev
+
+# RDS Configuration
+rds_instance_class = "db.t3.micro"
+rds_allocated_storage = 20
+rds_max_allocated_storage = 100
+db_name = "ecommerce"
+db_username = "dbadmin"  # Store actual password in Secrets Manager
+
+# ElastiCache Configuration
+redis_node_type = "cache.t3.micro"
+
+# MSK Configuration
+msk_instance_type = "kafka.t3.small"
+msk_ebs_volume_size = 100

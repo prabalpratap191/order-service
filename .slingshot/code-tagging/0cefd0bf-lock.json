@@ -1,0 +1,1525 @@
+{
+  "TROUBLESHOOTING.md": {
+    "filename": "TROUBLESHOOTING.md",
+    "path": "TROUBLESHOOTING.md",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "fed0da": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786431013,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "b06f0df0",
+          "files": "f51fa6ad"
+        },
+        "hash": "9e91a026",
+        "messageId": "system_b54f4730-9550-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 12:20:13 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "fed0da",
+        "hash": "21617e1c",
+        "encoded": "#%20Troubleshooting%20Guide",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "fed0da",
+        "hash": "2b9e7a95",
+        "encoded": "##%20%E2%8F%B0%20TimeZone%20Issues",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "fed0da",
+        "hash": "1c5ae27c",
+        "encoded": "###%20Issue:%20%60FATAL:%20invalid%20value%20for%20parameter%20%22TimeZone%22:%20%22Asia/Calcutta%22%60",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "fed0da",
+        "hash": "51721566",
+        "encoded": "**Root%20Cause:**%20PostgreSQL%20doesn't%20recognize%20%22Asia/Calcutta%22%20as%20a%20valid%20timezone.%20The%20correct%20identifier%20is%20%22Asia/Kolkata%22.",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "fed0da",
+        "hash": "73ce5323",
+        "encoded": "**Solutions%20Applied:**",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "fed0da",
+        "hash": "fcffa8ab",
+        "encoded": "1.%20%E2%9C%85%20**Application-level%20fix**%20-%20Set%20default%20timezone%20in%20%60OrderServiceApplication.java%60",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "fed0da",
+        "hash": "bf4825ba",
+        "encoded": "2.%20%E2%9C%85%20**JDBC%20URL%20parameter**%20-%20Added%20%60?TimeZone=Asia/Kolkata%60%20to%20connection%20URL",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "fed0da",
+        "hash": "94a98a90",
+        "encoded": "3.%20%E2%9C%85%20**HikariCP%20property**%20-%20Configured%20datasource%20timezone%20property",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "fed0da",
+        "hash": "6f250907",
+        "encoded": "**Additional%20Options%20(if%20issue%20persists):**",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "fed0da",
+        "hash": "d2098496",
+        "encoded": "###%20Option%201:%20JVM%20Argument",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "fed0da",
+        "hash": "82883ef2",
+        "encoded": "Add%20to%20your%20run%20configuration:",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "fed0da",
+        "hash": "8d900de2",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "fed0da",
+        "hash": "172d5f38",
+        "encoded": "-Duser.timezone=Asia/Kolkata",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "fed0da",
+        "hash": "529379ff",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "fed0da",
+        "hash": "37bb7df5",
+        "encoded": "**Maven:**",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "fed0da",
+        "hash": "6ca7e8c1",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "fed0da",
+        "hash": "fe6cf40f",
+        "encoded": "mvn%20spring-boot:run%20-Dspring-boot.run.jvmArguments=%22-Duser.timezone=Asia/Kolkata%22",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "fed0da",
+        "hash": "7cae3a01",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "fed0da",
+        "hash": "8c189fa9",
+        "encoded": "**IntelliJ%20IDEA:**",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "fed0da",
+        "hash": "42c60f83",
+        "encoded": "-%20Run%20%E2%86%92%20Edit%20Configurations",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "fed0da",
+        "hash": "aebd9b4d",
+        "encoded": "-%20VM%20options:%20%60-Duser.timezone=Asia/Kolkata%60",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "fed0da",
+        "hash": "e6e1ddbe",
+        "encoded": "**JAR%20execution:**",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "fed0da",
+        "hash": "992a1d5e",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "fed0da",
+        "hash": "2de9b1ac",
+        "encoded": "java%20-Duser.timezone=Asia/Kolkata%20-jar%20order-service-1.0.0.jar",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "fed0da",
+        "hash": "1345d99c",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "fed0da",
+        "hash": "1ab2c105",
+        "encoded": "###%20Option%202:%20Environment%20Variable",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "fed0da",
+        "hash": "9fb99b03",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "fed0da",
+        "hash": "811a17e6",
+        "encoded": "export%20TZ=Asia/Kolkata",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "fed0da",
+        "hash": "6fd415d2",
+        "encoded": "mvn%20spring-boot:run",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "fed0da",
+        "hash": "cd4430ef",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "fed0da",
+        "hash": "26baaca4",
+        "encoded": "###%20Option%203:%20Use%20UTC%20(Recommended%20for%20Production)",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "fed0da",
+        "hash": "8b27b28a",
+        "encoded": "Change%20timezone%20to%20UTC%20to%20avoid%20regional%20timezone%20issues:",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "fed0da",
+        "hash": "59e0c37c",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "fed0da",
+        "hash": "f6fa5e10",
+        "encoded": "//%20In%20OrderServiceApplication.java",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "fed0da",
+        "hash": "a2696e18",
+        "encoded": "TimeZone.setDefault(TimeZone.getTimeZone(%22UTC%22));",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "fed0da",
+        "hash": "6770b6ad",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "fed0da",
+        "hash": "c9324bcf",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "fed0da",
+        "hash": "6724318f",
+        "encoded": "#%20In%20application.yml",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "fed0da",
+        "hash": "193b2edb",
+        "encoded": "spring:",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "fed0da",
+        "hash": "0ba84624",
+        "encoded": "datasource:",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "fed0da",
+        "hash": "4b438c87",
+        "encoded": "url:%20jdbc:postgresql://localhost:5432/orderDb?TimeZone=UTC",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "fed0da",
+        "hash": "40e23bdf",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "fed0da",
+        "hash": "ae7e77e3",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "fed0da",
+        "hash": "0216b351",
+        "encoded": "##%20%F0%9F%94%8C%20Database%20Connection%20Issues",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "fed0da",
+        "hash": "02e63273",
+        "encoded": "###%20Issue:%20Connection%20Refused",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "fed0da",
+        "hash": "211f362e",
+        "encoded": "**Check%20if%20PostgreSQL%20is%20running:**",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "fed0da",
+        "hash": "648898ab",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "fed0da",
+        "hash": "daed2457",
+        "encoded": "cd%20..",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "fed0da",
+        "hash": "fa4d83e6",
+        "encoded": "docker-compose%20-f%20db-docker-compose.yml%20ps",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "fed0da",
+        "hash": "dfb5484c",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "fed0da",
+        "hash": "0d3dad39",
+        "encoded": "**Expected%20output:**",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "fed0da",
+        "hash": "45f8512d",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "fed0da",
+        "hash": "596888d7",
+        "encoded": "NAME%20%20%20%20%20%20%20%20%20%20%20%20%20%20IMAGE%20%20%20%20%20%20%20%20%20%20%20%20%20%20STATUS",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "fed0da",
+        "hash": "de1e0a05",
+        "encoded": "postgres_db%20%20%20%20%20%20%20postgres%20%20%20%20%20%20%20%20%20%20%20Up",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "fed0da",
+        "hash": "f554fb57",
+        "encoded": "pgadmin_web%20%20%20%20%20%20%20dpage/pgadmin4%20%20%20%20%20Up",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "fed0da",
+        "hash": "c8a2a638",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "fed0da",
+        "hash": "df44e12b",
+        "encoded": "**Solution:**",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "fed0da",
+        "hash": "7f0222be",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "fed0da",
+        "hash": "ed4d2e63",
+        "encoded": "docker-compose%20-f%20db-docker-compose.yml%20up%20-d",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "fed0da",
+        "hash": "3b0706cd",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "fed0da",
+        "hash": "766ebf7f",
+        "encoded": "###%20Issue:%20Authentication%20Failed",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "fed0da",
+        "hash": "3edad866",
+        "encoded": "**Verify%20credentials%20match:**",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "fed0da",
+        "hash": "b7d7f934",
+        "encoded": "1.%20Check%20%60db-docker-compose.yml%60:",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "fed0da",
+        "hash": "8105adac",
+        "encoded": "-%20POSTGRES_USER:%20%60pgadmin%60",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "fed0da",
+        "hash": "af9079dc",
+        "encoded": "-%20POSTGRES_PASSWORD:%20%60pgadminpass%60",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "fed0da",
+        "hash": "a51c301c",
+        "encoded": "-%20POSTGRES_DB:%20%60orderDb%60",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "fed0da",
+        "hash": "a8e75131",
+        "encoded": "2.%20Check%20%60application.yml%60:",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "fed0da",
+        "hash": "0378193a",
+        "encoded": "-%20username:%20%60pgadmin%60",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "fed0da",
+        "hash": "7663d08c",
+        "encoded": "-%20password:%20%60pgadminpass%60",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "fed0da",
+        "hash": "3bc41ecc",
+        "encoded": "-%20database%20in%20URL:%20%60orderDb%60",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "fed0da",
+        "hash": "b9e6f4d1",
+        "encoded": "###%20Issue:%20Database%20Does%20Not%20Exist",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "fed0da",
+        "hash": "ba371138",
+        "encoded": "**Check%20database%20name:**",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "fed0da",
+        "hash": "a5f570e9",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "fed0da",
+        "hash": "e838c22f",
+        "encoded": "docker%20exec%20-it%20postgres_db%20psql%20-U%20pgadmin%20-l",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "fed0da",
+        "hash": "dcb64610",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "fed0da",
+        "hash": "562a33dc",
+        "encoded": "**Create%20database%20if%20missing:**",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "fed0da",
+        "hash": "2fb96899",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "fed0da",
+        "hash": "5800fec3",
+        "encoded": "docker%20exec%20-it%20postgres_db%20psql%20-U%20pgadmin%20-c%20%22CREATE%20DATABASE%20orderDb;%22",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "fed0da",
+        "hash": "062ff69e",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "fed0da",
+        "hash": "46c710ac",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "fed0da",
+        "hash": "8b32914f",
+        "encoded": "##%20%F0%9F%8F%97%EF%B8%8F%20Hibernate%20Schema%20Issues",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "fed0da",
+        "hash": "3ca144ad",
+        "encoded": "###%20Issue:%20Table%20doesn't%20exist",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "fed0da",
+        "hash": "f02a88a3",
+        "encoded": "**Option%201:%20Use%20%60update%60%20mode%20(Development)**",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "fed0da",
+        "hash": "d2497467",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "fed0da",
+        "hash": "29776a0f",
+        "encoded": "#%20application-local.yml",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "fed0da",
+        "hash": "21520055",
+        "encoded": "spring:",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "fed0da",
+        "hash": "0d51eb49",
+        "encoded": "jpa:",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "fed0da",
+        "hash": "2a2e4aa2",
+        "encoded": "hibernate:",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "fed0da",
+        "hash": "acd0dba3",
+        "encoded": "ddl-auto:%20update%20%20#%20Auto-creates%20tables",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "fed0da",
+        "hash": "7f8c4a36",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "fed0da",
+        "hash": "9d084aa1",
+        "encoded": "**Option%202:%20Use%20%60create-drop%60%20mode%20(Testing)**",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "fed0da",
+        "hash": "28abe468",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "fed0da",
+        "hash": "5e2c9677",
+        "encoded": "spring:",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "fed0da",
+        "hash": "e0dd402c",
+        "encoded": "jpa:",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "fed0da",
+        "hash": "24db62fa",
+        "encoded": "hibernate:",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "fed0da",
+        "hash": "2fc816b6",
+        "encoded": "ddl-auto:%20create-drop%20%20#%20Recreates%20schema%20on%20startup",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "fed0da",
+        "hash": "b23b66af",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "fed0da",
+        "hash": "4cd926d8",
+        "encoded": "**Option%203:%20Manual%20Schema%20Creation**",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "fed0da",
+        "hash": "9f8e7d44",
+        "encoded": "%60%60%60sql",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "fed0da",
+        "hash": "aae0592f",
+        "encoded": "--%20Run%20in%20pgAdmin",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "fed0da",
+        "hash": "b8371ea2",
+        "encoded": "CREATE%20TABLE%20orders%20(",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "fed0da",
+        "hash": "ab3deacc",
+        "encoded": "id%20BIGSERIAL%20PRIMARY%20KEY,",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "fed0da",
+        "hash": "77c08a2b",
+        "encoded": "order_number%20VARCHAR(255)%20UNIQUE%20NOT%20NULL,",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "fed0da",
+        "hash": "3b66ae1a",
+        "encoded": "--%20Add%20other%20columns%20based%20on%20your%20entity",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "fed0da",
+        "hash": "416b7244",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "fed0da",
+        "hash": "f5522d99",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "fed0da",
+        "hash": "d7f9e8f6",
+        "encoded": "###%20Issue:%20Schema%20validation%20failed",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "fed0da",
+        "hash": "9c8d408d",
+        "encoded": "**Solution:**%20Set%20to%20%60update%60%20mode%20during%20development:",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "fed0da",
+        "hash": "68b9275e",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "fed0da",
+        "hash": "a780c974",
+        "encoded": "spring:",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "fed0da",
+        "hash": "733d0a60",
+        "encoded": "jpa:",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "fed0da",
+        "hash": "b34a7184",
+        "encoded": "hibernate:",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "fed0da",
+        "hash": "21e1527c",
+        "encoded": "ddl-auto:%20update%20%20#%20Instead%20of%20'validate'",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "fed0da",
+        "hash": "05a4771b",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "fed0da",
+        "hash": "f4a1753b",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "fed0da",
+        "hash": "66aa882f",
+        "encoded": "##%20%F0%9F%9A%80%20Build%20&%20Run%20Issues",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "fed0da",
+        "hash": "622e284a",
+        "encoded": "###%20Issue:%20PostgreSQL%20driver%20not%20found",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "fed0da",
+        "hash": "9cbeffd8",
+        "encoded": "**Solution:**%20Ensure%20dependency%20is%20uncommented%20in%20%60pom.xml%60:",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "fed0da",
+        "hash": "ab20cccb",
+        "encoded": "%60%60%60xml",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "fed0da",
+        "hash": "ab955a6b",
+        "encoded": "%3Cdependency%3E",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "fed0da",
+        "hash": "f7edfcc9",
+        "encoded": "%3CgroupId%3Eorg.postgresql%3C/groupId%3E",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "fed0da",
+        "hash": "7b596892",
+        "encoded": "%3CartifactId%3Epostgresql%3C/artifactId%3E",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "fed0da",
+        "hash": "d9b9f40f",
+        "encoded": "%3Cscope%3Eruntime%3C/scope%3E",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "fed0da",
+        "hash": "2be40ea4",
+        "encoded": "%3C/dependency%3E",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "fed0da",
+        "hash": "a93485b4",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "fed0da",
+        "hash": "9cc2e3ea",
+        "encoded": "**Rebuild:**",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "fed0da",
+        "hash": "2f55be27",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "fed0da",
+        "hash": "0063364e",
+        "encoded": "mvn%20clean%20install",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "fed0da",
+        "hash": "b6f1c8b8",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "fed0da",
+        "hash": "8aaa6fa6",
+        "encoded": "###%20Issue:%20Port%208083%20already%20in%20use",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "fed0da",
+        "hash": "0fd1e8ae",
+        "encoded": "**Find%20process%20using%20port:**",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "fed0da",
+        "hash": "ff760365",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "fed0da",
+        "hash": "0590a4e3",
+        "encoded": "#%20Windows",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "fed0da",
+        "hash": "a35010cc",
+        "encoded": "netstat%20-ano%20%7C%20findstr%20:8083",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "fed0da",
+        "hash": "0d6863b2",
+        "encoded": "#%20Kill%20process%20(replace%20PID)",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "fed0da",
+        "hash": "3c5925b1",
+        "encoded": "taskkill%20/PID%20%3CPID%3E%20/F",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "fed0da",
+        "hash": "823cbf55",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "fed0da",
+        "hash": "d4ffc705",
+        "encoded": "**Or%20change%20port%20in%20%60application.yml%60:**",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "fed0da",
+        "hash": "27aa5b66",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "fed0da",
+        "hash": "49abc8c2",
+        "encoded": "server:",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "fed0da",
+        "hash": "9c65fb03",
+        "encoded": "port:%208084%20%20#%20Use%20different%20port",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "fed0da",
+        "hash": "90b49a47",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "fed0da",
+        "hash": "5791b716",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "fed0da",
+        "hash": "efeb931a",
+        "encoded": "##%20%F0%9F%93%8A%20Data%20Issues",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "fed0da",
+        "hash": "16a22462",
+        "encoded": "###%20Issue:%20Data%20not%20persisting",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "fed0da",
+        "hash": "9e1c7580",
+        "encoded": "**Check%20volume%20mount:**",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "fed0da",
+        "hash": "5200840d",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "fed0da",
+        "hash": "31814565",
+        "encoded": "#%20Inspect%20volume",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "fed0da",
+        "hash": "f1c9024f",
+        "encoded": "docker%20volume%20ls",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "fed0da",
+        "hash": "6328bde7",
+        "encoded": "docker%20volume%20inspect%20%3Cvolume_name%3E",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "fed0da",
+        "hash": "77444ad1",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "fed0da",
+        "hash": "f4d1c61c",
+        "encoded": "**Check%20data%20directory:**",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "fed0da",
+        "hash": "cf8a3044",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "fed0da",
+        "hash": "32331a43",
+        "encoded": "ls%20-la%20../data/pgdata",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "fed0da",
+        "hash": "09d1bf16",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "fed0da",
+        "hash": "1281af15",
+        "encoded": "###%20Issue:%20Need%20to%20reset%20database",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "fed0da",
+        "hash": "1604d590",
+        "encoded": "**Complete%20reset:**",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "fed0da",
+        "hash": "ad2d027b",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "fed0da",
+        "hash": "cc11388a",
+        "encoded": "cd%20..",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "fed0da",
+        "hash": "4dbceefa",
+        "encoded": "docker-compose%20-f%20db-docker-compose.yml%20down%20-v",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "fed0da",
+        "hash": "b5aab607",
+        "encoded": "rm%20-rf%20data",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "fed0da",
+        "hash": "52b8b9e2",
+        "encoded": "docker-compose%20-f%20db-docker-compose.yml%20up%20-d",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "fed0da",
+        "hash": "b76731c7",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "fed0da",
+        "hash": "515cf771",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "fed0da",
+        "hash": "81de79d1",
+        "encoded": "##%20%F0%9F%94%8D%20Debugging%20Tips",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "fed0da",
+        "hash": "6cb49896",
+        "encoded": "###%20Enable%20SQL%20Logging",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "fed0da",
+        "hash": "c214b46b",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "fed0da",
+        "hash": "57f6a057",
+        "encoded": "#%20application-local.yml",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "fed0da",
+        "hash": "708bff48",
+        "encoded": "spring:",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "fed0da",
+        "hash": "d2e15151",
+        "encoded": "jpa:",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "fed0da",
+        "hash": "004abdfa",
+        "encoded": "show-sql:%20true",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "fed0da",
+        "hash": "7768b789",
+        "encoded": "properties:",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "fed0da",
+        "hash": "8700b160",
+        "encoded": "hibernate:",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "fed0da",
+        "hash": "0f2506e8",
+        "encoded": "format_sql:%20true",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "fed0da",
+        "hash": "7d0ce7cb",
+        "encoded": "logging:",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "fed0da",
+        "hash": "17a697c3",
+        "encoded": "level:",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "fed0da",
+        "hash": "ab026bf1",
+        "encoded": "org.hibernate.SQL:%20DEBUG",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "fed0da",
+        "hash": "f48689a1",
+        "encoded": "org.hibernate.type.descriptor.sql.BasicBinder:%20TRACE",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "fed0da",
+        "hash": "9f4a7485",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "fed0da",
+        "hash": "ff0798fd",
+        "encoded": "###%20Check%20HikariCP%20Pool%20Status",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "fed0da",
+        "hash": "1e619835",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "fed0da",
+        "hash": "20129811",
+        "encoded": "logging:",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "fed0da",
+        "hash": "556be111",
+        "encoded": "level:",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "fed0da",
+        "hash": "87ee7642",
+        "encoded": "com.zaxxer.hikari:%20DEBUG",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "fed0da",
+        "hash": "57c4acd8",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "fed0da",
+        "hash": "23d8a879",
+        "encoded": "###%20Enable%20Actuator%20Endpoints",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "fed0da",
+        "hash": "16978077",
+        "encoded": "Access%20health%20check:",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "fed0da",
+        "hash": "72e65106",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "fed0da",
+        "hash": "fee34516",
+        "encoded": "http://localhost:8083/actuator/health",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "fed0da",
+        "hash": "4b4073ff",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "fed0da",
+        "hash": "70410873",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "fed0da",
+        "hash": "6c94ec5c",
+        "encoded": "##%20%F0%9F%86%98%20Quick%20Commands%20Reference",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "fed0da",
+        "hash": "f947e515",
+        "encoded": "###%20Docker%20Commands",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "fed0da",
+        "hash": "34f14a5d",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "fed0da",
+        "hash": "f2d766ac",
+        "encoded": "#%20Start%20databases",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "fed0da",
+        "hash": "4b0ef3a8",
+        "encoded": "cd%20..%20&&%20docker-compose%20-f%20db-docker-compose.yml%20up%20-d",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "fed0da",
+        "hash": "de2fc3d2",
+        "encoded": "#%20View%20logs",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "fed0da",
+        "hash": "54b247a6",
+        "encoded": "docker-compose%20-f%20db-docker-compose.yml%20logs%20-f",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "fed0da",
+        "hash": "8c7b6efc",
+        "encoded": "#%20Stop%20databases",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "fed0da",
+        "hash": "c1179c08",
+        "encoded": "docker-compose%20-f%20db-docker-compose.yml%20stop",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "fed0da",
+        "hash": "ab2c6b0c",
+        "encoded": "#%20Remove%20everything",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "fed0da",
+        "hash": "9e1272bf",
+        "encoded": "docker-compose%20-f%20db-docker-compose.yml%20down%20-v",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "fed0da",
+        "hash": "2aaf471e",
+        "encoded": "#%20Connect%20to%20PostgreSQL",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "fed0da",
+        "hash": "4b49bbd6",
+        "encoded": "docker%20exec%20-it%20postgres_db%20psql%20-U%20pgadmin%20-d%20orderDb",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "fed0da",
+        "hash": "4efc69d9",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "fed0da",
+        "hash": "b9e4463b",
+        "encoded": "###%20Maven%20Commands",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "fed0da",
+        "hash": "e193bb14",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "fed0da",
+        "hash": "e55e9f67",
+        "encoded": "#%20Clean%20build",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "fed0da",
+        "hash": "e66b0082",
+        "encoded": "mvn%20clean%20install",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "fed0da",
+        "hash": "fbefff8c",
+        "encoded": "#%20Run%20with%20profile",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "fed0da",
+        "hash": "7433fc7c",
+        "encoded": "mvn%20spring-boot:run%20-Dspring-boot.run.profiles=local",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "fed0da",
+        "hash": "c43afe6d",
+        "encoded": "#%20Run%20with%20timezone",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "fed0da",
+        "hash": "1e2cbcd3",
+        "encoded": "mvn%20spring-boot:run%20-Dspring-boot.run.jvmArguments=%22-Duser.timezone=Asia/Kolkata%22",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "fed0da",
+        "hash": "c990a2b7",
+        "encoded": "#%20Skip%20tests",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "fed0da",
+        "hash": "9a1969e7",
+        "encoded": "mvn%20clean%20install%20-DskipTests",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "fed0da",
+        "hash": "49992ac4",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "fed0da",
+        "hash": "d6eb4f6f",
+        "encoded": "###%20Database%20Commands",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "fed0da",
+        "hash": "308b4397",
+        "encoded": "%60%60%60sql",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "fed0da",
+        "hash": "aadf6ffe",
+        "encoded": "--%20List%20databases",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "fed0da",
+        "hash": "09e92b55",
+        "encoded": "%5Cl",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "fed0da",
+        "hash": "58bc0f22",
+        "encoded": "--%20Connect%20to%20database",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "fed0da",
+        "hash": "ad003c9a",
+        "encoded": "%5Cc%20orderDb",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "fed0da",
+        "hash": "369cc209",
+        "encoded": "--%20List%20tables",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "fed0da",
+        "hash": "c8a44ace",
+        "encoded": "%5Cdt",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "fed0da",
+        "hash": "74f80792",
+        "encoded": "--%20Describe%20table",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "fed0da",
+        "hash": "299be130",
+        "encoded": "%5Cd%20orders",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "fed0da",
+        "hash": "dec85750",
+        "encoded": "--%20Check%20timezone",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "fed0da",
+        "hash": "f5e68a4d",
+        "encoded": "SHOW%20timezone;",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "fed0da",
+        "hash": "7389b49b",
+        "encoded": "--%20Set%20timezone",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "fed0da",
+        "hash": "6eae7d1b",
+        "encoded": "SET%20timezone%20=%20'Asia/Kolkata';",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "fed0da",
+        "hash": "0f5d1418",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "fed0da",
+        "hash": "87c32b7e",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "fed0da",
+        "hash": "f0e810d9",
+        "encoded": "##%20%F0%9F%93%9E%20Getting%20More%20Help",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "fed0da",
+        "hash": "5caed91d",
+        "encoded": "If%20issues%20persist:",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "fed0da",
+        "hash": "ef54fabe",
+        "encoded": "1.%20**Check%20application%20logs**%20-%20Look%20for%20stack%20traces",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "fed0da",
+        "hash": "9420a8b8",
+        "encoded": "2.%20**Check%20Docker%20logs**%20-%20%60docker-compose%20logs%20db%60",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "fed0da",
+        "hash": "d2d33a9d",
+        "encoded": "3.%20**Verify%20network%20connectivity**%20-%20%60telnet%20localhost%205432%60",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "fed0da",
+        "hash": "eb62098d",
+        "encoded": "4.%20**Check%20firewall%20settings**%20-%20Ensure%20port%205432%20is%20not%20blocked",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "fed0da",
+        "hash": "938568ab",
+        "encoded": "5.%20**Review%20configuration%20files**%20-%20Double-check%20credentials",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "fed0da",
+        "hash": "f5e8a27e",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "fed0da",
+        "hash": "453e7d12",
+        "encoded": "##%20%E2%9C%85%20Health%20Check%20Checklist",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "fed0da",
+        "hash": "bc4b7a4e",
+        "encoded": "-%20%5B%20%5D%20Docker%20Desktop%20is%20running",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "fed0da",
+        "hash": "fdffe3e7",
+        "encoded": "-%20%5B%20%5D%20PostgreSQL%20container%20is%20up%20(%60docker%20ps%60)",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "fed0da",
+        "hash": "faebff78",
+        "encoded": "-%20%5B%20%5D%20Port%205432%20is%20accessible%20(%60telnet%20localhost%205432%60)",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "fed0da",
+        "hash": "7b6fde31",
+        "encoded": "-%20%5B%20%5D%20Credentials%20match%20in%20application.yml%20and%20docker-compose",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "fed0da",
+        "hash": "853fb0d5",
+        "encoded": "-%20%5B%20%5D%20Database%20name%20is%20correct%20(%60orderDb%60)",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "fed0da",
+        "hash": "329be08a",
+        "encoded": "-%20%5B%20%5D%20PostgreSQL%20driver%20dependency%20is%20included",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "fed0da",
+        "hash": "f79ea678",
+        "encoded": "-%20%5B%20%5D%20Timezone%20is%20set%20correctly%20(Asia/Kolkata%20or%20UTC)",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "fed0da",
+        "hash": "e8df8aba",
+        "encoded": "-%20%5B%20%5D%20Application%20can%20connect%20(%60mvn%20spring-boot:run%60)",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

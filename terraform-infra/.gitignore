@@ -1,0 +1,48 @@
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+.terraform.lock.hcl
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Sensitive files
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+
+# IDE and OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.backup
+*.bak
+*.tmp
+
+# Kubernetes secrets
+secrets/
+*.secret.yaml
+
+# Helm
+*.tgz
+charts/*/charts/
+
+# Jenkins
+jenkins_home/
+
+# Logs
+*.log
+logs/

@@ -1,0 +1,15 @@
+{
+  "filename": "README.md",
+  "path": "README.md",
+  "version": "1.1",
+  "files": {},
+  "promptMessage": {
+    "771e6c07": {
+      "value": "how to run kafka server on docker using docker compose"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

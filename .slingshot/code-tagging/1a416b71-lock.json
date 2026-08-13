@@ -1,0 +1,624 @@
+{
+  "full-stack-docker-compose.yml": {
+    "filename": "full-stack-docker-compose.yml",
+    "path": "full-stack-docker-compose.yml",
+    "version": "1.2",
+    "contextFile": "1a416b71-context.json",
+    "chunks": {
+      "85259b": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786434183,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "771e6c07"
+        },
+        "hash": "33c37063",
+        "messageId": "system_2d316ab0-9558-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 1:13:03 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "85259b",
+        "hash": "c83fa028",
+        "encoded": "version:%20%223.8%22",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "85259b",
+        "hash": "751b5859",
+        "encoded": "services:",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "85259b",
+        "hash": "02b11d92",
+        "encoded": "#%20PostgreSQL%20Database",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "85259b",
+        "hash": "58e1ce5a",
+        "encoded": "db:",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "85259b",
+        "hash": "edbe9d82",
+        "encoded": "container_name:%20postgres_db",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "85259b",
+        "hash": "1e747cae",
+        "encoded": "image:%20postgres:latest",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "85259b",
+        "hash": "1a67aac5",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "85259b",
+        "hash": "b5db47fb",
+        "encoded": "POSTGRES_USER:%20pgadmin",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "85259b",
+        "hash": "8d132202",
+        "encoded": "POSTGRES_PASSWORD:%20pgadminpass",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "85259b",
+        "hash": "4ee1f2ce",
+        "encoded": "POSTGRES_DB:%20orderDb",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "85259b",
+        "hash": "1a329860",
+        "encoded": "PGDATA:%20/var/lib/postgresql/data/pgdata",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "85259b",
+        "hash": "5bdbafe4",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "85259b",
+        "hash": "ca17b181",
+        "encoded": "-%20postgres_data:/var/lib/postgresql/data",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "85259b",
+        "hash": "2538a072",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "85259b",
+        "hash": "779d14b3",
+        "encoded": "-%20%225432:5432%22",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "85259b",
+        "hash": "ea80ad26",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "85259b",
+        "hash": "98e13028",
+        "encoded": "-%20app_network",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "85259b",
+        "hash": "3995d794",
+        "encoded": "healthcheck:",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "85259b",
+        "hash": "40d7486b",
+        "encoded": "test:%20%5B%22CMD-SHELL%22,%20%22pg_isready%20-U%20pgadmin%20-d%20orderDb%22%5D",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "85259b",
+        "hash": "6758b8eb",
+        "encoded": "interval:%2010s",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "85259b",
+        "hash": "186e2708",
+        "encoded": "timeout:%205s",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "85259b",
+        "hash": "af7fe75a",
+        "encoded": "retries:%205",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "85259b",
+        "hash": "c281ab7e",
+        "encoded": "#%20pgAdmin",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "85259b",
+        "hash": "baf0efda",
+        "encoded": "pgadmin:",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "85259b",
+        "hash": "f3c05544",
+        "encoded": "container_name:%20pgadmin_web",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "85259b",
+        "hash": "e1253d42",
+        "encoded": "image:%20dpage/pgadmin4:latest",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "85259b",
+        "hash": "7a499a20",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "85259b",
+        "hash": "03dde3a3",
+        "encoded": "PGADMIN_DEFAULT_EMAIL:%20ppsingh.singh2@gmail.com",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "85259b",
+        "hash": "d7217888",
+        "encoded": "PGADMIN_DEFAULT_PASSWORD:%20pgadminpass",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "85259b",
+        "hash": "391ca158",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "85259b",
+        "hash": "a25ac731",
+        "encoded": "-%20%228080:80%22",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "85259b",
+        "hash": "86b6366d",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "85259b",
+        "hash": "2edd3103",
+        "encoded": "-%20app_network",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "85259b",
+        "hash": "fed8c573",
+        "encoded": "depends_on:",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "85259b",
+        "hash": "e1f874d3",
+        "encoded": "-%20db",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "85259b",
+        "hash": "fa1f671b",
+        "encoded": "#%20Zookeeper",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "85259b",
+        "hash": "5cbfbb35",
+        "encoded": "zookeeper:",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "85259b",
+        "hash": "23b5de5b",
+        "encoded": "container_name:%20zookeeper",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "85259b",
+        "hash": "d69f1704",
+        "encoded": "image:%20confluentinc/cp-zookeeper:7.5.0",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "85259b",
+        "hash": "0c3c2d96",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "85259b",
+        "hash": "37e7d4d5",
+        "encoded": "ZOOKEEPER_CLIENT_PORT:%202181",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "85259b",
+        "hash": "9a137bcb",
+        "encoded": "ZOOKEEPER_TICK_TIME:%202000",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "85259b",
+        "hash": "20cf7cd6",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "85259b",
+        "hash": "89674b89",
+        "encoded": "-%20%222181:2181%22",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "85259b",
+        "hash": "3e8176c1",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "85259b",
+        "hash": "fc13d9f7",
+        "encoded": "-%20app_network",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "85259b",
+        "hash": "607d12b1",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "85259b",
+        "hash": "f31d2b62",
+        "encoded": "-%20zookeeper_data:/var/lib/zookeeper/data",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "85259b",
+        "hash": "5f8d18f0",
+        "encoded": "-%20zookeeper_logs:/var/lib/zookeeper/log",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "85259b",
+        "hash": "ccaf6c7f",
+        "encoded": "#%20Kafka",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "85259b",
+        "hash": "329d4232",
+        "encoded": "kafka:",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "85259b",
+        "hash": "63e87623",
+        "encoded": "container_name:%20kafka",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "85259b",
+        "hash": "b950cfc5",
+        "encoded": "image:%20confluentinc/cp-kafka:7.5.0",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "85259b",
+        "hash": "80902dfc",
+        "encoded": "depends_on:",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "85259b",
+        "hash": "1e46bf2b",
+        "encoded": "-%20zookeeper",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "85259b",
+        "hash": "b3738058",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "85259b",
+        "hash": "bffeae6f",
+        "encoded": "-%20%229092:9092%22",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "85259b",
+        "hash": "af2925df",
+        "encoded": "-%20%229093:9093%22",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "85259b",
+        "hash": "49ac8c10",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "85259b",
+        "hash": "5d3aad13",
+        "encoded": "KAFKA_BROKER_ID:%201",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "85259b",
+        "hash": "d55273e0",
+        "encoded": "KAFKA_ZOOKEEPER_CONNECT:%20zookeeper:2181",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "85259b",
+        "hash": "2b48d668",
+        "encoded": "KAFKA_ADVERTISED_LISTENERS:%20PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://kafka:9093",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "85259b",
+        "hash": "a156c7c9",
+        "encoded": "KAFKA_LISTENER_SECURITY_PROTOCOL_MAP:%20PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "85259b",
+        "hash": "c43d3188",
+        "encoded": "KAFKA_INTER_BROKER_LISTENER_NAME:%20PLAINTEXT_INTERNAL",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "85259b",
+        "hash": "054a416c",
+        "encoded": "KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR:%201",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "85259b",
+        "hash": "27fc0b08",
+        "encoded": "KAFKA_TRANSACTION_STATE_LOG_MIN_ISR:%201",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "85259b",
+        "hash": "a0b3958a",
+        "encoded": "KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR:%201",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "85259b",
+        "hash": "799b6591",
+        "encoded": "KAFKA_AUTO_CREATE_TOPICS_ENABLE:%20%22true%22",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "85259b",
+        "hash": "8cd93def",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "85259b",
+        "hash": "09c23645",
+        "encoded": "-%20app_network",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "85259b",
+        "hash": "baf30899",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "85259b",
+        "hash": "1aa57529",
+        "encoded": "-%20kafka_data:/var/lib/kafka/data",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "85259b",
+        "hash": "f8679c69",
+        "encoded": "healthcheck:",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "85259b",
+        "hash": "22f7db63",
+        "encoded": "test:%20%5B%22CMD%22,%20%22kafka-broker-api-versions%22,%20%22--bootstrap-server%22,%20%22localhost:9092%22%5D",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "85259b",
+        "hash": "1ac79192",
+        "encoded": "interval:%2010s",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "85259b",
+        "hash": "e3ddd086",
+        "encoded": "timeout:%2010s",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "85259b",
+        "hash": "0c201a30",
+        "encoded": "retries:%205",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "85259b",
+        "hash": "a299410f",
+        "encoded": "#%20Kafka%20UI",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "85259b",
+        "hash": "48b97fdf",
+        "encoded": "kafka-ui:",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "85259b",
+        "hash": "aab3fdae",
+        "encoded": "container_name:%20kafka-ui",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "85259b",
+        "hash": "21f54f4e",
+        "encoded": "image:%20provectuslabs/kafka-ui:latest",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "85259b",
+        "hash": "b186829e",
+        "encoded": "depends_on:",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "85259b",
+        "hash": "70e06bd7",
+        "encoded": "-%20kafka",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "85259b",
+        "hash": "6c6b41ac",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "85259b",
+        "hash": "0e3b9b6d",
+        "encoded": "-%20%228090:8080%22",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "85259b",
+        "hash": "d44dab27",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "85259b",
+        "hash": "d098ccd0",
+        "encoded": "KAFKA_CLUSTERS_0_NAME:%20local",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "85259b",
+        "hash": "e3e222e1",
+        "encoded": "KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS:%20kafka:9093",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "85259b",
+        "hash": "0e920c0a",
+        "encoded": "KAFKA_CLUSTERS_0_ZOOKEEPER:%20zookeeper:2181",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "85259b",
+        "hash": "65e7dedf",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "85259b",
+        "hash": "216533bd",
+        "encoded": "-%20app_network",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "85259b",
+        "hash": "a0870937",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "85259b",
+        "hash": "3210d587",
+        "encoded": "app_network:",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "85259b",
+        "hash": "066f284e",
+        "encoded": "driver:%20bridge",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "85259b",
+        "hash": "df39d1cd",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "85259b",
+        "hash": "279ba481",
+        "encoded": "postgres_data:",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "85259b",
+        "hash": "4fc3f68c",
+        "encoded": "zookeeper_data:",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "85259b",
+        "hash": "f60037d7",
+        "encoded": "zookeeper_logs:",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "85259b",
+        "hash": "14f76562",
+        "encoded": "kafka_data:",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

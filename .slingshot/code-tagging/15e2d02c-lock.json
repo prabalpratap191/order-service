@@ -1,0 +1,373 @@
+{
+  "docker-compose.yml": {
+    "filename": "docker-compose.yml",
+    "path": "docker-compose.yml",
+    "version": "1.2",
+    "contextFile": "15e2d02c-context.json",
+    "chunks": {
+      "6ff5ca": {
+        "user": "Prabal Singh",
+        "model": "gpt-4.1",
+        "timestamp": 1786349276,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "chat",
+        "type": "createFileWithCode",
+        "extraContext": {
+          "promptMessage": "8826869a"
+        },
+        "hash": "143b6d21",
+        "messageId": "system_4b561880-9489-11f1-8d41-89be209ba4e4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: gpt-4.1\n- **timestamp**: 8/10/2026, 1:37:56 PM\n- **source**: chat\n- **type**: createFileWithCode\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "6ff5ca",
+        "hash": "2a21fcd5",
+        "encoded": "version:%20%223.9%22",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "6ff5ca",
+        "hash": "bac03990",
+        "encoded": "services:",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "6ff5ca",
+        "hash": "7cde75d0",
+        "encoded": "postgres:",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "6ff5ca",
+        "hash": "e037d404",
+        "encoded": "image:%20postgres:16.2",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "6ff5ca",
+        "hash": "7d434165",
+        "encoded": "container_name:%20postgres-db",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "6ff5ca",
+        "hash": "c8451501",
+        "encoded": "restart:%20always",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "6ff5ca",
+        "hash": "2a9ad0b1",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "6ff5ca",
+        "hash": "6c8d1539",
+        "encoded": "POSTGRES_USER:%20admin",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "6ff5ca",
+        "hash": "dbe54257",
+        "encoded": "POSTGRES_PASSWORD:%20adminpass",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "6ff5ca",
+        "hash": "313c7d56",
+        "encoded": "POSTGRES_DB:%20orderservice_db",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "6ff5ca",
+        "hash": "1b0b0e7c",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "6ff5ca",
+        "hash": "e1766b98",
+        "encoded": "-%20%225432:5432%22",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "6ff5ca",
+        "hash": "02ae246b",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "6ff5ca",
+        "hash": "9d062f0c",
+        "encoded": "-%20backend",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "6ff5ca",
+        "hash": "1159810d",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "6ff5ca",
+        "hash": "278c7d1c",
+        "encoded": "-%20pgdata:/var/lib/postgresql/data",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "6ff5ca",
+        "hash": "15bdece2",
+        "encoded": "#%20Example:%20order-service%20(add%20your%20actual%20service%20image/config)",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "6ff5ca",
+        "hash": "9074baa9",
+        "encoded": "order-service:",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "6ff5ca",
+        "hash": "0ac0f79d",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "6ff5ca",
+        "hash": "b1c51aef",
+        "encoded": "DB_HOST:%20postgres",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "6ff5ca",
+        "hash": "4c81d0bd",
+        "encoded": "DB_PORT:%205432",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "6ff5ca",
+        "hash": "a24fe244",
+        "encoded": "DB_NAME:%20orderservice_db",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "6ff5ca",
+        "hash": "5806444d",
+        "encoded": "DB_USER:%20admin",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "6ff5ca",
+        "hash": "a22349e8",
+        "encoded": "DB_PASSWORD:%20adminpass",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "6ff5ca",
+        "hash": "53a8c73d",
+        "encoded": "depends_on:",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "6ff5ca",
+        "hash": "ea305db7",
+        "encoded": "-%20postgres",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "6ff5ca",
+        "hash": "53f270f1",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "6ff5ca",
+        "hash": "073756b8",
+        "encoded": "-%20backend",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "6ff5ca",
+        "hash": "1ac02845",
+        "encoded": "#%20Example:%20customer-service",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "6ff5ca",
+        "hash": "7251af70",
+        "encoded": "customer-service:",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "6ff5ca",
+        "hash": "46351145",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "6ff5ca",
+        "hash": "771d561d",
+        "encoded": "DB_HOST:%20postgres",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "6ff5ca",
+        "hash": "e3c33a42",
+        "encoded": "DB_PORT:%205432",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "6ff5ca",
+        "hash": "d692eeb5",
+        "encoded": "DB_NAME:%20customerservice_db",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "6ff5ca",
+        "hash": "6e111fa6",
+        "encoded": "DB_USER:%20admin",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "6ff5ca",
+        "hash": "a3c4fda7",
+        "encoded": "DB_PASSWORD:%20adminpass",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "6ff5ca",
+        "hash": "ba5637f4",
+        "encoded": "depends_on:",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "6ff5ca",
+        "hash": "08e93e53",
+        "encoded": "-%20postgres",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "6ff5ca",
+        "hash": "492d4439",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "6ff5ca",
+        "hash": "7a5888f4",
+        "encoded": "-%20backend",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "6ff5ca",
+        "hash": "23e6a128",
+        "encoded": "#%20Example:%20catalog-service",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "6ff5ca",
+        "hash": "1380576d",
+        "encoded": "catalog-service:",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "6ff5ca",
+        "hash": "34c582c0",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "6ff5ca",
+        "hash": "52e25f6b",
+        "encoded": "DB_HOST:%20postgres",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "6ff5ca",
+        "hash": "9401ed67",
+        "encoded": "DB_PORT:%205432",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "6ff5ca",
+        "hash": "41cf4e14",
+        "encoded": "DB_NAME:%20catalogservice_db",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "6ff5ca",
+        "hash": "97a2dd7f",
+        "encoded": "DB_USER:%20admin",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "6ff5ca",
+        "hash": "743c52fb",
+        "encoded": "DB_PASSWORD:%20adminpass",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "6ff5ca",
+        "hash": "5c2dd37d",
+        "encoded": "depends_on:",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "6ff5ca",
+        "hash": "3810d209",
+        "encoded": "-%20postgres",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "6ff5ca",
+        "hash": "61de3c15",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "6ff5ca",
+        "hash": "c00d7dee",
+        "encoded": "-%20backend",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "6ff5ca",
+        "hash": "52c02bb0",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "6ff5ca",
+        "hash": "e465b4cb",
+        "encoded": "pgdata:",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "6ff5ca",
+        "hash": "bc037d25",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "6ff5ca",
+        "hash": "112e7bee",
+        "encoded": "backend:",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "6ff5ca",
+        "hash": "ede78694",
+        "encoded": "driver:%20bridge",
+        "prevChunkIds": []
+      }
+    },
+    "_prevLineCount": 81
+  }
+}

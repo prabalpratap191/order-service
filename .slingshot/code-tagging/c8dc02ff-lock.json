@@ -1,0 +1,229 @@
+{
+  "src\\main\\java\\com\\ecommerce\\order\\OrderServiceApplication.java": {
+    "filename": "OrderServiceApplication.java",
+    "path": "src\\main\\java\\com\\ecommerce\\order\\OrderServiceApplication.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "0b901f": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786430956,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "b06f0df0",
+          "files": "f51fa6ad"
+        },
+        "hash": "466b2e67",
+        "messageId": "system_b54f4730-9550-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 12:19:16 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "aed1fa": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786433831,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "b9ce3e58"
+        },
+        "hash": "e98e042e",
+        "messageId": "system_6a48b800-9557-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 1:07:11 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "aed1fa",
+        "hash": "f53aa018",
+        "encoded": "package%20com.ecommerce.order;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "aed1fa",
+        "hash": "b2a739bd",
+        "encoded": "import%20org.springframework.boot.SpringApplication;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "aed1fa",
+        "hash": "93b94c0f",
+        "encoded": "import%20org.springframework.boot.autoconfigure.SpringBootApplication;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "aed1fa",
+        "hash": "12ce819a",
+        "encoded": "import%20java.util.TimeZone;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "aed1fa",
+        "hash": "53198e64",
+        "encoded": "@SpringBootApplication",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "aed1fa",
+        "hash": "6ed06996",
+        "encoded": "public%20class%20OrderServiceApplication%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "aed1fa",
+        "hash": "59c5ebdf",
+        "encoded": "public%20static%20void%20main(String%5B%5D%20args)%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "aed1fa",
+        "hash": "66c48386",
+        "encoded": "//%20CRITICAL:%20Set%20timezone%20BEFORE%20Spring%20Boot%20starts",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "aed1fa",
+        "hash": "e31491b0",
+        "encoded": "//%20This%20must%20happen%20before%20any%20database%20connections%20are%20established",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "aed1fa",
+        "hash": "7695801c",
+        "encoded": "TimeZone.setDefault(TimeZone.getTimeZone(%22Asia/Kolkata%22));",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "aed1fa",
+        "hash": "701da7db",
+        "encoded": "//%20Verify%20timezone%20is%20set%20correctly",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "aed1fa",
+        "hash": "8c278b08",
+        "encoded": "System.out.println(%22Application%20Timezone:%20%22%20+%20TimeZone.getDefault().getID());",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "aed1fa",
+        "hash": "0994a1f6",
+        "encoded": "SpringApplication.run(OrderServiceApplication.class,%20args);",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "aed1fa",
+        "hash": "ee39c532",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "aed1fa",
+        "hash": "acbf036f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "0b901f",
+        "hash": "9cd9aa6b",
+        "encoded": "import%20org.springframework.boot.SpringApplication;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "0b901f",
+        "hash": "2885eb9d",
+        "encoded": "import%20org.springframework.boot.autoconfigure.SpringBootApplication;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "0b901f",
+        "hash": "e8637ced",
+        "encoded": "import%20jakarta.annotation.PostConstruct;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "0b901f",
+        "hash": "fcd8184a",
+        "encoded": "import%20java.util.TimeZone;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "0b901f",
+        "hash": "a7bae377",
+        "encoded": "@SpringBootApplication",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "0b901f",
+        "hash": "afab2ad7",
+        "encoded": "public%20class%20OrderServiceApplication%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "0b901f",
+        "hash": "1865aff1",
+        "encoded": "@PostConstruct",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "0b901f",
+        "hash": "a43fa642",
+        "encoded": "public%20void%20init()%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "0b901f",
+        "hash": "eb210bf2",
+        "encoded": "//%20Set%20default%20timezone%20to%20Asia/Kolkata%20(India%20Standard%20Time)",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "0b901f",
+        "hash": "2b893748",
+        "encoded": "TimeZone.setDefault(TimeZone.getTimeZone(%22Asia/Kolkata%22));",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "0b901f",
+        "hash": "dfad4947",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "0b901f",
+        "hash": "486c395f",
+        "encoded": "public%20static%20void%20main(String%5B%5D%20args)%20%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "0b901f",
+        "hash": "0661484d",
+        "encoded": "SpringApplication.run(OrderServiceApplication.class,%20args);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "0b901f",
+        "hash": "4771cdac",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "0b901f",
+        "hash": "792377b1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

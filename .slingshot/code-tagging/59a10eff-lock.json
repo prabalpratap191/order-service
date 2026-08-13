@@ -1,0 +1,86 @@
+{
+  ".env.example": {
+    "filename": ".env.example",
+    "path": ".env.example",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "e6bc16": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786430635,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "d936a9dd",
+          "files": "645e8594"
+        },
+        "hash": "9a1e2e53",
+        "messageId": "system_e998db60-954f-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 12:13:55 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "e6bc16",
+        "hash": "8c08fccf",
+        "encoded": "#%20Database%20Configuration",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "e6bc16",
+        "hash": "f91dc386",
+        "encoded": "DB_USERNAME=pgadmin",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "e6bc16",
+        "hash": "60571221",
+        "encoded": "DB_PASSWORD=pgadminpass",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "e6bc16",
+        "hash": "c96b4992",
+        "encoded": "DB_HOST=localhost",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "e6bc16",
+        "hash": "ad4f98b6",
+        "encoded": "DB_PORT=5432",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "e6bc16",
+        "hash": "57aa2d0e",
+        "encoded": "DB_NAME=orderDb",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "e6bc16",
+        "hash": "c3facc4f",
+        "encoded": "#%20Kafka%20Configuration",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "e6bc16",
+        "hash": "c458c230",
+        "encoded": "KAFKA_BOOTSTRAP_SERVERS=localhost:9092",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "e6bc16",
+        "hash": "5c436380",
+        "encoded": "#%20Application%20Configuration",
+        "prevChunkIds": []
+      }
+    },
+    "_prevLineCount": 13
+  }
+}

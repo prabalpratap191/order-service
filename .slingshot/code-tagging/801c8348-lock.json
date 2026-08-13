@@ -1,0 +1,402 @@
+{
+  "kafka-docker-compose.yml": {
+    "filename": "kafka-docker-compose.yml",
+    "path": "kafka-docker-compose.yml",
+    "version": "1.2",
+    "contextFile": "801c8348-context.json",
+    "chunks": {
+      "394048": {
+        "user": "Prabal Singh",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1786434183,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.0.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "771e6c07"
+        },
+        "hash": "684acd03",
+        "messageId": "system_2d316ab0-9558-11f1-8c1b-bd97e1fa2932",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Prabal Singh\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 8/11/2026, 1:13:03 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "394048",
+        "hash": "c83fa028",
+        "encoded": "version:%20%223.8%22",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "394048",
+        "hash": "751b5859",
+        "encoded": "services:",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "394048",
+        "hash": "bcb10c92",
+        "encoded": "zookeeper:",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "394048",
+        "hash": "1dc45995",
+        "encoded": "container_name:%20zookeeper",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "394048",
+        "hash": "23711f61",
+        "encoded": "image:%20confluentinc/cp-zookeeper:7.5.0",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "394048",
+        "hash": "2a9ad0b1",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "394048",
+        "hash": "f6574b13",
+        "encoded": "ZOOKEEPER_CLIENT_PORT:%202181",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "394048",
+        "hash": "02e6bae5",
+        "encoded": "ZOOKEEPER_TICK_TIME:%202000",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "394048",
+        "hash": "5ae55298",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "394048",
+        "hash": "a234cf24",
+        "encoded": "-%20%222181:2181%22",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "394048",
+        "hash": "a185bcdd",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "394048",
+        "hash": "2e7698ff",
+        "encoded": "-%20kafka_network",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "394048",
+        "hash": "8441b9c1",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "394048",
+        "hash": "c36af198",
+        "encoded": "-%20zookeeper_data:/var/lib/zookeeper/data",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "394048",
+        "hash": "c833f584",
+        "encoded": "-%20zookeeper_logs:/var/lib/zookeeper/log",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "394048",
+        "hash": "78e5dad9",
+        "encoded": "kafka:",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "394048",
+        "hash": "df367233",
+        "encoded": "container_name:%20kafka",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "394048",
+        "hash": "10ad05fd",
+        "encoded": "image:%20confluentinc/cp-kafka:7.5.0",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "394048",
+        "hash": "0bc22207",
+        "encoded": "depends_on:",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "394048",
+        "hash": "0fd6e470",
+        "encoded": "-%20zookeeper",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "394048",
+        "hash": "cd3e1b05",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "394048",
+        "hash": "0e34d673",
+        "encoded": "-%20%229092:9092%22",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "394048",
+        "hash": "c3543df7",
+        "encoded": "-%20%229093:9093%22",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "394048",
+        "hash": "3b902cbd",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "394048",
+        "hash": "47dfdb81",
+        "encoded": "KAFKA_BROKER_ID:%201",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "394048",
+        "hash": "28f2fbab",
+        "encoded": "KAFKA_ZOOKEEPER_CONNECT:%20zookeeper:2181",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "394048",
+        "hash": "fd700fb3",
+        "encoded": "KAFKA_ADVERTISED_LISTENERS:%20PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://kafka:9093",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "394048",
+        "hash": "108fc4fe",
+        "encoded": "KAFKA_LISTENER_SECURITY_PROTOCOL_MAP:%20PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "394048",
+        "hash": "3a192a32",
+        "encoded": "KAFKA_INTER_BROKER_LISTENER_NAME:%20PLAINTEXT_INTERNAL",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "394048",
+        "hash": "b00b3536",
+        "encoded": "KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR:%201",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "394048",
+        "hash": "08c14632",
+        "encoded": "KAFKA_TRANSACTION_STATE_LOG_MIN_ISR:%201",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "394048",
+        "hash": "a71dfea0",
+        "encoded": "KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR:%201",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "394048",
+        "hash": "1af8b8c0",
+        "encoded": "KAFKA_AUTO_CREATE_TOPICS_ENABLE:%20%22true%22",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "394048",
+        "hash": "3843a2f3",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "394048",
+        "hash": "90307379",
+        "encoded": "-%20kafka_network",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "394048",
+        "hash": "154f0947",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "394048",
+        "hash": "e7e756fe",
+        "encoded": "-%20kafka_data:/var/lib/kafka/data",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "394048",
+        "hash": "3a0bcd93",
+        "encoded": "healthcheck:",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "394048",
+        "hash": "12e2a549",
+        "encoded": "test:%20%5B%22CMD%22,%20%22kafka-broker-api-versions%22,%20%22--bootstrap-server%22,%20%22localhost:9092%22%5D",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "394048",
+        "hash": "ab15428f",
+        "encoded": "interval:%2010s",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "394048",
+        "hash": "f8a7cfeb",
+        "encoded": "timeout:%2010s",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "394048",
+        "hash": "ac7a3473",
+        "encoded": "retries:%205",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "394048",
+        "hash": "a01db49c",
+        "encoded": "kafka-ui:",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "394048",
+        "hash": "73f693a7",
+        "encoded": "container_name:%20kafka-ui",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "394048",
+        "hash": "3eb924ec",
+        "encoded": "image:%20provectuslabs/kafka-ui:latest",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "394048",
+        "hash": "dabdb5d2",
+        "encoded": "depends_on:",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "394048",
+        "hash": "7b305e6e",
+        "encoded": "-%20kafka",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "394048",
+        "hash": "eed37b84",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "394048",
+        "hash": "7187f9d0",
+        "encoded": "-%20%228090:8080%22",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "394048",
+        "hash": "7f7775d3",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "394048",
+        "hash": "a37e69cd",
+        "encoded": "KAFKA_CLUSTERS_0_NAME:%20local",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "394048",
+        "hash": "9bb380c5",
+        "encoded": "KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS:%20kafka:9093",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "394048",
+        "hash": "d18e662f",
+        "encoded": "KAFKA_CLUSTERS_0_ZOOKEEPER:%20zookeeper:2181",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "394048",
+        "hash": "61de3c15",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "394048",
+        "hash": "e90c6c6b",
+        "encoded": "-%20kafka_network",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "394048",
+        "hash": "25072f26",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "394048",
+        "hash": "0daf7fe6",
+        "encoded": "kafka_network:",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "394048",
+        "hash": "a087c395",
+        "encoded": "driver:%20bridge",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "394048",
+        "hash": "87e7a1ab",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "394048",
+        "hash": "fe06e88b",
+        "encoded": "zookeeper_data:",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "394048",
+        "hash": "605d445f",
+        "encoded": "zookeeper_logs:",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "394048",
+        "hash": "143c0dd8",
+        "encoded": "kafka_data:",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

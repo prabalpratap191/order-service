@@ -1,0 +1,15 @@
+{
+  "filename": "docker-compose.yml",
+  "path": "docker-compose.yml",
+  "version": "1.1",
+  "files": {},
+  "promptMessage": {
+    "8826869a": {
+      "value": "can you help me to install postgresql on docker ranchor desktop and use it in multiple service like order service, customer service catalog service etc"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "order-service.fullname" . }}-config
+  labels:
+    {{- include "order-service.labels" . | nindent 4 }}
+data:
+  application.properties: |
+    # Server Configuration
+    server.port={{ .Values.service.targetPort }}
+    
+    # Database Configuration
+    spring.datasource.url=jdbc:postgresql://{{ .Values.database.host }}:{{ .Values.database.port }}/{{ .Values.database.name }}
+    spring.jpa.hibernate.ddl-auto=validate
+    spring.jpa.show-sql=false
+    spring.jpa.properties.hibernate.format_sql=true
+    
+    # Redis Configuration
+    spring.redis.host={{ .Values.redis.host }}
+    spring.redis.port={{ .Values.redis.port }}
+    
+    # Kafka Configuration
+    spring.kafka.bootstrap-servers={{ .Values.kafka.bootstrapServers }}
+    spring.kafka.security.protocol={{ .Values.kafka.securityProtocol }}
+    
+    # Actuator Configuration
+    management.endpoints.web.exposure.include=health,info,metrics,prometheus
+    management.endpoint.health.show-details=when-authorized
+    management.health.livenessState.enabled=true
+    management.health.readinessState.enabled=true
+    
+    # Logging Configuration
+    logging.level.root=INFO
+    logging.level.com.ecommerce=INFO
+    logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %msg%n

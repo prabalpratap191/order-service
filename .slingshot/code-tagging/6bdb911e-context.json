@@ -1,0 +1,49 @@
+{
+  "filename": "db-docker-compose.yml",
+  "path": "..\\db-docker-compose.yml",
+  "version": "1.1",
+  "files": {
+    "42151501": {
+      "value": [
+        {
+          "programming_language": "YAML",
+          "fileName": "db-docker-compose.yml",
+          "relativeFilePath": "c:\\Users\\prasingh80\\Music\\Legacy\\MS Legacy\\db-docker-compose.yml",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            19
+          ]
+        }
+      ]
+    },
+    "534099ce": {
+      "value": [
+        {
+          "programming_language": "YAML",
+          "fileName": "db-docker-compose.yml",
+          "relativeFilePath": "c:\\Users\\prasingh80\\Music\\Legacy\\MS Legacy\\db-docker-compose.yml",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            21
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "aa082634": {
+      "value": "ocker compose -f db-docker-compose.yml up -d\nunable to get image 'postgres': failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified."
+    },
+    "a59526e5": {
+      "value": "not able to add server in pg admin"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}
